@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from cascade.data import (
+from cel.data import (
     EFFICACY_BACKBONE,
     EFFICACY_STUDIES,
     EfficacyDataset,
@@ -18,7 +18,7 @@ from cascade.data import (
     load_reynolds,
     load_vickers,
 )
-from cascade.data.efficacy import COLUMNS
+from cel.data.efficacy import COLUMNS
 
 
 def _raw(fixtures_dir: Path) -> Path:
@@ -80,7 +80,7 @@ def test_missing_dir_raises(cache_root: Path) -> None:
         load_oligoformer_efficacy("/no/such/dir", cache_root=cache_root)
 
 
-# --- REAL per-study loaders (cascade.data.efficacy v2) ------------------------
+# --- REAL per-study loaders (cel.data.efficacy v2) ------------------------
 def test_registry_covers_the_studies() -> None:
     assert set(EFFICACY_STUDIES) == {
         "huesken",
@@ -165,7 +165,7 @@ def test_missing_suite_lists_missing_urls(cache_root: Path, tmp_path) -> None:
 
 # --- OligoFormer schema: 19mer = sense, guide = reverse_complement -----------
 def test_reverse_complement_is_involution_and_rna() -> None:
-    from cascade.data import reverse_complement
+    from cel.data import reverse_complement
 
     # RNA complement over {A,C,G,U}: A<->U, G<->C, then reverse.
     assert reverse_complement("AUGC") == "GCAU"
@@ -183,7 +183,7 @@ def test_oligoformer_transform_sense_guide_efficacy(
     # Place the real OligoFormer-schema slice as huesken.csv and load it.
     import shutil
 
-    from cascade.data import load_huesken_efficacy, reverse_complement
+    from cel.data import load_huesken_efficacy, reverse_complement
 
     raw = tmp_path / "efficacy"
     raw.mkdir()

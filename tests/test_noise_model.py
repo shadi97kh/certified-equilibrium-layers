@@ -11,7 +11,7 @@ import numpy as np
 import pytest
 import scipy.sparse as sp
 
-from cascade.data import load_string_confidence
+from cel.data import load_string_confidence
 from certification import (
     EdgeBernoulliNoise,
     normalize_adjacency,

@@ -18,8 +18,8 @@ import pytest
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.embeddings import RNAFM_DIM, extract_embeddings, write_embeddings  # noqa: E402
-from cascade.embeddings.rnafm_extract import (  # noqa: E402
+from cel.embeddings import RNAFM_DIM, extract_embeddings, write_embeddings  # noqa: E402
+from cel.embeddings.rnafm_extract import (  # noqa: E402
     _clean_sequences,
     confirm_checkpoint,
     resolve_device,

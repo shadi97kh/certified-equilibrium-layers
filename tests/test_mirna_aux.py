@@ -16,7 +16,7 @@ import pytest
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.data import mirna_aux as ma  # noqa: E402
+from cel.data import mirna_aux as ma  # noqa: E402
 
 CACHES_PRESENT = (
     ma.MATRIX_PATH.exists() and ma.SEEDS_PATH.exists() and ma.REFSEQ2SYMBOL_PATH.exists()

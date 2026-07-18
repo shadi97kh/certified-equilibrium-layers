@@ -16,7 +16,7 @@ import pytest
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.design import t5_certified_select as cs  # noqa: E402
+from cel.design import t5_certified_select as cs  # noqa: E402
 
 
 def test_conformal_pvalues_closed_form() -> None:

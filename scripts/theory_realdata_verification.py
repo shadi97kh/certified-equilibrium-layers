@@ -121,7 +121,7 @@ def verify_mirna(K, x, M, occ_name):
 
 
 def run() -> dict:
-    from cascade.experiments.ot_train_transfer import load_corpus
+    from cel.experiments.ot_train_transfer import load_corpus
 
     corpus = load_corpus()
     corpus = corpus[corpus["best_site_type"].isin(CANONICAL)].copy()

@@ -11,7 +11,7 @@ import itertools
 import numpy as np
 import pytest
 
-from cascade.features import (
+from cel.features import (
     CONCEPT_SPECS,
     CONCEPTS,
     K,

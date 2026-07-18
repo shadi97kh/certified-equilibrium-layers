@@ -42,7 +42,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.verify import stability as st  # noqa: E402
+from cel.verify import stability as st  # noqa: E402
 
 OUT = REPO / "results" / "aaai"
 DEFAULT_ALPHAS = (0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95)
@@ -259,7 +259,7 @@ def _plot(directed: dict, symmetric: dict, path: Path) -> None:
 
 
 def _load_signed_grn(which: str, species: str):
-    from cascade.data import load_dorothea, load_trrust
+    from cel.data import load_dorothea, load_trrust
 
     if which == "trrust":
         return load_trrust(species=species)
@@ -317,7 +317,7 @@ def main() -> int:
 
     string_block = {"status": "not_requested"}
     if args.string_links:
-        from cascade.data import load_string_undirected
+        from cel.data import load_string_undirected
 
         try:
             sgrn = load_string_undirected(args.string_links)

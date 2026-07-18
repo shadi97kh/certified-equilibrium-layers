@@ -14,7 +14,7 @@ the position-to-site incidence, and canonical seed sites make seed positions 3-7
 incidence (every canonical window includes 3-7), so g({3})=...=g({7}) for ANY K and delta. The
 site-type K used below only sets the common magnitude; it is stated as such and does not decide the
 ranking of the core positions. The incidence is built from REAL seed complementarity (validated
-cascade.features.seedmatch on real 3'UTRs).
+cel.features.seedmatch on real 3'UTRs).
 """
 
 from __future__ import annotations
@@ -69,7 +69,7 @@ def load_fasta(path: Path) -> dict[str, str]:
 
 def build_sites(seed: str, utr_by_gene: dict[str, str], gene_ids: list[str]):
     """Real off-target sites: (type, window) for each canonical seed site in the 3'UTRs."""
-    from cascade.features.seedmatch import find_sites
+    from cel.features.seedmatch import find_sites
 
     guide = "A" + seed  # dummy position 1; find_sites reads seed as guide positions 2-8
     types = []

@@ -1,13 +1,10 @@
 # Certified Comparative Statics for Conservation-Law Equilibrium Layers, with an Application to siRNA Off-Target Competition
 
-**Paper:** *Certified Comparative Statics for Conservation-Law Equilibrium Layers, with an
-Application to siRNA Off-Target Competition*
-
 Interpretable modeling of siRNA seed-mediated off-target activity and competitive
 endogenous RNA (ceRNA) derepression, built on a certified conservation-law equilibrium
-operator with provable comparative statics.
+operator with provable comparative statics. The Python package is importable as `cel`.
 
-CASCADE extends CCMP (FiLM-conditioned per-concept heterogeneous message passing, K=9
+This work extends CCMP (FiLM-conditioned per-concept heterogeneous message passing, K=9
 concept channels) and preserves its by-construction zero cross-concept leakage property
 (L_k = 0). The full project contract, including hard engineering rules, lives in
 [OUTLINE.md](OUTLINE.md).

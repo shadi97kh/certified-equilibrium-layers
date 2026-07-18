@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Theorem 1: leakage-free per-concept identifiability, on REAL efficacy data.
 
-With the disjoint per-concept message-passing backbone (cascade.models.CCMPBackbone)
+With the disjoint per-concept message-passing backbone (cel.models.CCMPBackbone)
 this runs the intervention / leakage audit and compares against two shared-encoder
 concept-bottleneck baselines on the SAME real data:
 
@@ -40,9 +40,9 @@ import numpy as np
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.features import concept_layout, featurize_pairs  # noqa: E402
-from cascade.features.seedmatch import revcomp  # noqa: E402
-from cascade.verify import leakage as lk  # noqa: E402
+from cel.features import concept_layout, featurize_pairs  # noqa: E402
+from cel.features.seedmatch import revcomp  # noqa: E402
+from cel.verify import leakage as lk  # noqa: E402
 
 OUT = REPO / "results" / "aaai"
 MODEL_LABELS = ("disjoint_ccmp", "shared_encoder_cbm", "concept_embedding_model")
@@ -55,7 +55,7 @@ def _target_for(antisense: str, sense: str) -> str:
 
 def efficacy_matrix(raw_dir: Path, cache_root: Path) -> tuple[np.ndarray, np.ndarray]:
     """Featurize the real Huesken efficacy data (raises FileNotFoundError if absent)."""
-    from cascade.data import load_huesken_efficacy
+    from cel.data import load_huesken_efficacy
 
     ds = load_huesken_efficacy(raw_dir, cache_root=cache_root)
     frame = ds.frame
@@ -102,7 +102,7 @@ def _build_models(in_dim: int, names: list[str], seed: int):
     import torch
     from torch import nn
 
-    from cascade.models import CCMPBackbone
+    from cel.models import CCMPBackbone
 
     class SharedEncoderCBM(nn.Module):
         """One shared MLP encoder feeding K concept embeddings / scores (leaks)."""

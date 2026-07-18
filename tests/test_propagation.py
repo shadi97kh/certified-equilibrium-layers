@@ -45,7 +45,7 @@ def _trrust_scc_subgraph(n_target: int = 50) -> sp.csr_matrix:
     import networkx as nx
     from scipy.sparse.csgraph import connected_components
 
-    from cascade.data import load_trrust
+    from cel.data import load_trrust
 
     grn = load_trrust(species="human")  # raises FileNotFoundError if absent
     w = grn.signs.tocsr()
@@ -71,7 +71,7 @@ def _trrust_scc_subgraph(n_target: int = 50) -> sp.csr_matrix:
 
 
 def test_magnetic_laplacian_contracts_while_real_p_alpha_is_non_normal() -> None:
-    from cascade.data import load_trrust  # noqa: F401  (import gates the data skip)
+    from cel.data import load_trrust  # noqa: F401  (import gates the data skip)
 
     try:
         w_sub = _trrust_scc_subgraph(50)

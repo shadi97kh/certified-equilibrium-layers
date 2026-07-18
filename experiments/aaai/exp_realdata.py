@@ -3,7 +3,7 @@
 
 Runs the Theorem 4 probabilistic containment certificate
 (radius = ((1-alpha)/alpha) * b(delta) * ||x0||) on every dataset tagged
-offtarget_certification (cascade.data.datasets_with_role): GSE184929 (RNA-seq),
+offtarget_certification (cel.data.datasets_with_role): GSE184929 (RNA-seq),
 Jackson 2003, Jackson 2006, Birmingham 2006, and the SeedSeq union, with S from
 STRING.
 
@@ -43,7 +43,7 @@ import scipy.sparse as sp
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.data import (  # noqa: E402
+from cel.data import (  # noqa: E402
     OFFTARGET_CERTIFICATION,
     datasets_with_role,
     load_birmingham2006,
@@ -84,7 +84,7 @@ def build_real_inputs(name: str, string_links: str):
     and NotImplementedError for the transcript-to-node and sequence-to-x0 join
     that is not yet wired. No generated or fabricated values are ever returned.
     """
-    from cascade.data import load_string_confidence
+    from cel.data import load_string_confidence
 
     calls = load_measured_calls(name)  # real loader; FileNotFoundError if absent
     nodes, confidence = load_string_confidence(string_links, threshold=400)

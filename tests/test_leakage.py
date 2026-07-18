@@ -1,4 +1,4 @@
-"""Tests for the Theorem 1 leakage-audit primitives (cascade.verify.leakage).
+"""Tests for the Theorem 1 leakage-audit primitives (cel.verify.leakage).
 
 Pure numpy / sklearn (no torch): the audit functions are model-agnostic, so a
 disjoint embedding map and a shared one are checked with plain closures.
@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from cascade.verify import leakage as lk
+from cel.verify import leakage as lk
 
 NAMES = ["c0", "c1", "c2"]
 SLICES = {"c0": slice(0, 2), "c1": slice(2, 4), "c2": slice(4, 6)}

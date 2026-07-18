@@ -13,8 +13,8 @@ import pytest
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.design import gflownet_proposal as gp  # noqa: E402
-from cascade.design.t5_certified_select import TTR_D1, TTR_SEED, guide_for  # noqa: E402
+from cel.design import gflownet_proposal as gp  # noqa: E402
+from cel.design.t5_certified_select import TTR_D1, TTR_SEED, guide_for  # noqa: E402
 
 
 def test_diversity_closed_form() -> None:

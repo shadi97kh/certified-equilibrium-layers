@@ -21,8 +21,8 @@ sys.path.insert(0, str(REPO / "src"))
 pytest.importorskip("torch")
 import torch  # noqa: E402
 
-from cascade.features import CONCEPT_SPECS  # noqa: E402
-from cascade.models.concept_gnn import RNAFM_CONCEPT, ConceptGNN  # noqa: E402
+from cel.features import CONCEPT_SPECS  # noqa: E402
+from cel.models.concept_gnn import RNAFM_CONCEPT, ConceptGNN  # noqa: E402
 
 RNAFM_DIM = 640
 BASE_TOTAL = sum(len(feats) for _, feats in CONCEPT_SPECS)

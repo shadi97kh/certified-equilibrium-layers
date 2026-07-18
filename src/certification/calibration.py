@@ -13,7 +13,7 @@ from __future__ import annotations
 import numpy as np
 import scipy.sparse as sp
 
-from cascade.verify.containment import propagate, spectral_clip
+from cel.verify.containment import propagate, spectral_clip
 
 from .certify import certify_l2_region
 from .noise_model import RandomEdgeNoise

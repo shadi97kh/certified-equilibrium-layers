@@ -22,7 +22,7 @@ from dataclasses import dataclass
 import numpy as np
 import scipy.sparse as sp
 
-from cascade.verify.containment import spectral_clip
+from cel.verify.containment import spectral_clip
 
 NormalizationScheme = str  # one of "row", "sym", "none"
 
@@ -106,7 +106,7 @@ class EdgeBernoulliNoise:
     @classmethod
     def from_string(cls, raw_path, threshold: int = 700, taxid: int = 10116) -> EdgeBernoulliNoise:
         """Build the model from a STRING links file (c_ij = combined_score / 1000)."""
-        from cascade.data import load_string_confidence
+        from cel.data import load_string_confidence
 
         nodes, a_bar = load_string_confidence(raw_path, threshold=threshold, taxid=taxid)
         return cls(C=a_bar.tocsr(), nodes=nodes)

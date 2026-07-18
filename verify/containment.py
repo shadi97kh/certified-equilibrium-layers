@@ -25,8 +25,8 @@ import numpy as np
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.data import load_string_grn  # noqa: E402
-from cascade.verify.containment import plot_containment, verify_containment  # noqa: E402
+from cel.data import load_string_grn  # noqa: E402
+from cel.verify.containment import plot_containment, verify_containment  # noqa: E402
 
 OUT = REPO / "verify" / "_out"
 DEFAULT_GRAPH = REPO / "tests" / "fixtures" / "string_tiny.txt"

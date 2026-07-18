@@ -8,7 +8,7 @@ off-target E = P_alpha(S) e, and compares E to the measured DESeq2 log2 fold-cha
 microarray), scored with the SeedMatchR one-sided KS / ECDF metric.
 
 It reports, per dataset:
-- the deterministic certified bound (cascade.verify.offtarget_bound): the seed-error
+- the deterministic certified bound (cel.verify.offtarget_bound): the seed-error
   term ||P_alpha|| ||e - e_true|| plus the GRN-edge term via the second resolvent
   identity, ((1-alpha)/alpha) ||P_alpha(S)|| ||P_alpha(S')|| ||S - S'|| ||e||;
 - whether the predicted-vs-measured deviation stays WITHIN the bound;
@@ -40,7 +40,7 @@ import numpy as np
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.verify import offtarget_bound as ob  # noqa: E402
+from cel.verify import offtarget_bound as ob  # noqa: E402
 
 OUT = REPO / "results" / "aaai"
 DATASETS = (
@@ -65,7 +65,7 @@ def assess_dataset(
     p_prime_norm: float | None = None,
 ) -> dict:
     """Assemble the certified bound and compare it to the real measured deviation."""
-    from cascade.data.offtarget import seedmatch_ks_test
+    from cel.data.offtarget import seedmatch_ks_test
 
     e_norm = float(np.linalg.norm(e))
     cert = ob.certified_bound(S, alpha, e_norm, e_err_norm, s_err_norm, p_prime_norm=p_prime_norm)
@@ -105,7 +105,7 @@ def load_real_dataset(name: str, string_links: str | None, alpha: float) -> dict
     sequence-to-e (ViennaRNA seed occupancy) join, which is a tracked data gap. No
     value is returned from non-real inputs.
     """
-    from cascade.data import (
+    from cel.data import (
         load_birmingham2006,
         load_jackson2003,
         load_jackson2006,
@@ -122,7 +122,7 @@ def load_real_dataset(name: str, string_links: str | None, alpha: float) -> dict
     if name in microarray_loaders:
         calls = microarray_loaders[name]()  # real loader; FileNotFoundError if absent
     elif name == "gse184929":
-        from cascade.data import load_schlegel2022
+        from cel.data import load_schlegel2022
 
         # GSE184929 RNA-seq via the SeedMatchR export (raises FileNotFoundError if absent).
         calls = load_schlegel2022("Schlegel_2022_Ttr_D1_30mkg")
@@ -184,7 +184,7 @@ def microarray_offtarget(seedmatchr_dir: Path, cache_root: Path) -> dict:
     sources rather than fabricated. The loaders RAISE until a real parsed table with
     siRNA sequences is placed on disk.
     """
-    from cascade.data import load_birmingham2006, load_jackson2006
+    from cel.data import load_birmingham2006, load_jackson2006
 
     blockers = {
         "jackson2006": "Jackson 2006 (RNA 12:1179 / companion 12:1197) microarray = GEO GSE5814 "
@@ -209,7 +209,7 @@ def microarray_offtarget(seedmatchr_dir: Path, cache_root: Path) -> dict:
             continue
         # A real parsed table with siRNA sequences IS present: run the same native
         # seed-match KS as GSE184929 (seed-matched vs background measured effect size).
-        from cascade.data.offtarget import seedmatch_ks_test
+        from cel.data.offtarget import seedmatch_ks_test
 
         frame = ds.frame
         seeds = frame["seed"].astype(str).str.upper()
@@ -373,8 +373,8 @@ def assess_trrust_join(
     grn, alpha: float, ds, name: str, e_rel_err: float, s_rel_err: float
 ) -> dict:
     """Propagate the seed input over the real TRRUST P_alpha and certify the deviation."""
-    from cascade.data.offtarget import seedmatch_ks_test
-    from cascade.verify.stability import operator_2norm
+    from cel.data.offtarget import seedmatch_ks_test
+    from cel.verify.stability import operator_2norm
 
     S = grn.S
     e, measured, seed_mask, aligned = _align_seed_input(grn, ds)
@@ -456,11 +456,11 @@ def grn_propagation_join(
     SignedDirectedGRN (mouse TRRUST, CollecTRI mouse) to run the same join on a
     species-matched network.
     """
-    from cascade.data import SEEDMATCHR_DATASETS, load_schlegel2022
+    from cel.data import SEEDMATCHR_DATASETS, load_schlegel2022
 
     if grn is None:
         try:
-            from cascade.data import load_trrust
+            from cel.data import load_trrust
 
             grn = load_trrust(species="human")
         except (FileNotFoundError, NotImplementedError) as exc:
@@ -509,12 +509,12 @@ def budget_sweep(
     ``grn`` defaults to human TRRUST; pass a preloaded GRN to sweep a species-matched
     network. With ``include_alignment`` each row carries the per-contrast n_aligned.
     """
-    from cascade.data import SEEDMATCHR_DATASETS, load_schlegel2022
-    from cascade.verify.stability import operator_2norm
+    from cel.data import SEEDMATCHR_DATASETS, load_schlegel2022
+    from cel.verify.stability import operator_2norm
 
     if grn is None:
         try:
-            from cascade.data import load_trrust
+            from cel.data import load_trrust
 
             grn = load_trrust(species="human")
         except (FileNotFoundError, NotImplementedError) as exc:
@@ -589,7 +589,7 @@ def grn_robustness(
     judged robust across GRN source AND matched to the rat GSE184929 data species.
     Each GRN that fails to load (real data absent) is reported as pending, not faked.
     """
-    from cascade.data import load_collectri, load_trrust
+    from cel.data import load_collectri, load_trrust
 
     specs = (
         ("human_trrust", lambda: load_trrust(species="human")),
@@ -636,7 +636,7 @@ def measured_offtarget(seedmatchr_dir: Path, cache_root: Path) -> dict:
     (parent) and D4 (single g7 GNA) share the seed, so the seed-match set is identical;
     the KS contrast measures whether the GNA destabilization removes the seed off-target.
     """
-    from cascade.data import SEEDMATCHR_DATASETS, load_schlegel2022
+    from cel.data import SEEDMATCHR_DATASETS, load_schlegel2022
 
     per_contrast: dict = {}
     pending: dict = {}

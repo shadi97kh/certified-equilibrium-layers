@@ -18,7 +18,7 @@ sys.path.insert(0, str(REPO / "src"))
 pytest.importorskip("torch")
 import torch  # noqa: E402
 
-from cascade.models.prop_layer import (  # noqa: E402
+from cel.models.prop_layer import (  # noqa: E402
     MonotoneEquilibriumPropagation,
     analytic_propagate,
 )

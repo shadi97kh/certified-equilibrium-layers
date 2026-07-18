@@ -9,7 +9,7 @@ Monte-Carlo center y_bar and the computable plug-in mean-graph center y_plugin
 for comparison.
 
 The package reuses the CASCADE P_alpha operator and the spectral clip from
-``cascade.verify.containment`` and never re-implements them (OUTLINE.md rule 8).
+``cel.verify.containment`` and never re-implements them (OUTLINE.md rule 8).
 Pure numpy / scipy, so it runs in the lightweight CI image.
 """
 

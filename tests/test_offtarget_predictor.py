@@ -19,7 +19,7 @@ sys.path.insert(0, str(REPO / "src"))
 pytest.importorskip("torch")
 import torch  # noqa: E402
 
-from cascade.models.offtarget_predictor import (  # noqa: E402
+from cel.models.offtarget_predictor import (  # noqa: E402
     CONCEPT_DIMS,
     OffTargetPredictor,
     assert_leakage_free,

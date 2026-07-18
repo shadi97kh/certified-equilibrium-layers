@@ -102,7 +102,7 @@ def _load_deseq(path: Path, gene_col: str, logfc_col: str, sep: str) -> dict[str
 def _seed_match(seed: str, utr_by_gene: dict[str, list[str]], genes, canonical: set[str]):
     """UNION over 3'UTR isoforms: a gene is seed-matched if ANY isoform carries a canonical 6-8mer
     site; n_canonical_sites = MAX over isoforms; best_site_type = tightest site across all isoforms."""
-    from cascade.features.seedmatch import find_sites
+    from cel.features.seedmatch import find_sites
 
     guide = "A" + seed  # dummy position 1; find_sites reads the seed as guide positions 2-8
     flags = {}

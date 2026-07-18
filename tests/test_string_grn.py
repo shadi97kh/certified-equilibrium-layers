@@ -8,7 +8,7 @@ import numpy as np
 import pytest
 import scipy.sparse as sp
 
-from cascade.data import StringGRN, load_string_grn
+from cel.data import StringGRN, load_string_grn
 
 P1 = "10116.ENSRNOP001"
 P2 = "10116.ENSRNOP002"

@@ -24,7 +24,7 @@ from scipy import stats
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 sys.path.insert(0, str(REPO / "scripts"))
-from cascade.features.seedmatch import find_sites  # noqa: E402
+from cel.features.seedmatch import find_sites  # noqa: E402
 from certified_panel_filtered import CONTRASTS, tested_ids  # noqa: E402
 from seedmod_loader import _load_fasta  # noqa: E402
 

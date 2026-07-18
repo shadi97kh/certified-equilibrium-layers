@@ -9,7 +9,7 @@ REAL DATA ONLY. The guide is the confirmed Schlegel 2022 Ttr siRNA antisense
 
 For each rat gene in the DESeq2 tables, every annotated 3'UTR (Ensembl BioMart,
 Rattus norvegicus) is scanned for canonical seed sites with the native
-cascade.features.seedmatch logic. A gene is "seed-matched" if any of its 3'UTRs
+cel.features.seedmatch logic. A gene is "seed-matched" if any of its 3'UTRs
 carries an effective canonical site (8mer / 7mer-m8 / 7mer-A1). Genes with no
 3'UTR in the reference get an empty annotation (NaN), so they are excluded from
 the KS test rather than silently called background. No values are generated.
@@ -17,7 +17,7 @@ the KS test rather than silently called background. No values are generated.
 The GSE184929 rat-liver tables are aligned to Rnor_6.0 (GEO Sample_data_processing),
 so the build-matched 3'UTRs come from the Ensembl apr2020 archive via
 scripts/download_rat_3utr.sh. Writes the seed_match_count column back into each
-data/raw/offtarget/seedmatchr/<dataset>.csv (so cascade.data.load_schlegel2022 sees
+data/raw/offtarget/seedmatchr/<dataset>.csv (so cel.data.load_schlegel2022 sees
 has_seed_annotation for the Theorem 4 KS) and prints the per-dataset SeedMatchR
 one-sided KS under both background definitions (all genes, and 3'UTR-bearing only).
 """
@@ -32,8 +32,8 @@ import pandas as pd
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.data import seedmatch_ks_test  # noqa: E402
-from cascade.features.seedmatch import find_sites  # noqa: E402
+from cel.data import seedmatch_ks_test  # noqa: E402
+from cel.features.seedmatch import find_sites  # noqa: E402
 
 GUIDE = "UUAUAGAGCAAGAACACUGUUUU"  # Schlegel 2022 NAR Table 2, Ttr D1/D4 (shared seed UAUAGAG)
 CANONICAL = {"8mer", "7mer-m8", "7mer-A1"}  # effective seed sites (TargetScan canonical)

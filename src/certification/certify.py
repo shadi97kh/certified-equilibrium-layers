@@ -28,7 +28,7 @@ import numpy as np
 import scipy.sparse as sp
 from scipy.stats import binom
 
-from cascade.verify.containment import operator_norm, propagate, spectral_clip
+from cel.verify.containment import operator_norm, propagate, spectral_clip
 
 from .noise_model import RandomEdgeNoise
 

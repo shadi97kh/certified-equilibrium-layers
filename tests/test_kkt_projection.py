@@ -1,4 +1,4 @@
-"""Tests for the KKT mass-action projection layers (cascade.models.kkt_projection)."""
+"""Tests for the KKT mass-action projection layers (cel.models.kkt_projection)."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ import pytest
 
 torch = pytest.importorskip("torch")
 
-from cascade.models.kkt_projection import (  # noqa: E402
+from cel.models.kkt_projection import (  # noqa: E402
     KKTLinearProjection,
     MassActionProjection,
     fit_mass_action_line,

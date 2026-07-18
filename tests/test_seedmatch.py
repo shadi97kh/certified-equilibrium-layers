@@ -2,14 +2,14 @@
 
 from __future__ import annotations
 
-from cascade.features import (
+from cel.features import (
     extract_seed,
     find_sites,
     revcomp,
     seed_match_score,
     seed_site_words,
 )
-from cascade.features.seedmatch import to_rna
+from cel.features.seedmatch import to_rna
 
 # let-7-like 21 nt guide (antisense, 5' to 3'); seed (2-8) is GAGGUAG.
 GUIDE = "UGAGGUAGUAGGUUGUAUAGU"

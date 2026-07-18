@@ -4,13 +4,13 @@ from __future__ import annotations
 
 import pytest
 
-from cascade.data import (
+from cel.data import (
     EFFICACY_BACKBONE,
     OFFTARGET_CERTIFICATION,
     dataset_role,
     datasets_with_role,
 )
-from cascade.data.roles import DATASET_ROLES, ROLES
+from cel.data.roles import DATASET_ROLES, ROLES
 
 
 def test_only_two_real_data_roles() -> None:

@@ -24,8 +24,8 @@ import numpy as np
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.data import load_string_grn  # noqa: E402
-from cascade.verify.containment import spectral_gap  # noqa: E402
+from cel.data import load_string_grn  # noqa: E402
+from cel.verify.containment import spectral_gap  # noqa: E402
 from certification import RandomEdgeNoise, certify_l2_region, empirical_coverage  # noqa: E402
 
 OUT = REPO / "results" / "aaai"

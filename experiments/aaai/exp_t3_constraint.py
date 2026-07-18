@@ -3,7 +3,7 @@
 
 Ties the predicted off-target knockdown k_g to the REAL ViennaRNA seed-duplex
 free energy dG_g via a mass-action (Langmuir / Hill) occupancy law, enforced by a
-differentiable KKT orthogonal-projection layer (cascade.models.kkt_projection)
+differentiable KKT orthogonal-projection layer (cel.models.kkt_projection)
 applied at train and test.
 
 - Mass-action line: logit(knockdown) = a + b*dG, with (a, b) calibrated from the
@@ -44,8 +44,8 @@ import numpy as np
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.features import featurize_pairs  # noqa: E402
-from cascade.features.seedmatch import revcomp  # noqa: E402
+from cel.features import featurize_pairs  # noqa: E402
+from cel.features.seedmatch import revcomp  # noqa: E402
 
 OUT = REPO / "results" / "aaai"
 RESIDUAL_TOL = 1e-8
@@ -67,7 +67,7 @@ def _featurize(frame, mu=None, sd=None):
 
 
 def _seed_dgs(frame) -> np.ndarray:
-    from cascade.features.thermo import seed_duplex_dg
+    from cel.features.thermo import seed_duplex_dg
 
     anti = frame["antisense"].tolist()
     tgt = [_target_for(a, s) for a, s in zip(frame["antisense"], frame["sense"], strict=True)]
@@ -83,8 +83,8 @@ def real_inputs(raw_dir: Path, cache_root: Path):
     Memoized per (raw_dir, cache_root): the data is identical across seeds, so the
     features and the ViennaRNA dG are computed once, not once per seed.
     """
-    from cascade.data import load_huesken_efficacy
-    from cascade.features.thermo import require_vienna
+    from cel.data import load_huesken_efficacy
+    from cel.features.thermo import require_vienna
 
     require_vienna()  # raises ImportError (with the install command) if ViennaRNA is absent
     key = (str(raw_dir), str(cache_root))
@@ -122,9 +122,9 @@ def dg_diagnostic(raw_dir: Path, cache_root: Path) -> dict:
     """
     import torch
 
-    from cascade.data import load_huesken_efficacy
-    from cascade.features.thermo import require_vienna, thermo_asymmetry
-    from cascade.models.kkt_projection import fit_mass_action_line
+    from cel.data import load_huesken_efficacy
+    from cel.features.thermo import require_vienna, thermo_asymmetry
+    from cel.models.kkt_projection import fit_mass_action_line
 
     require_vienna()
     frame = load_huesken_efficacy(raw_dir, cache_root=cache_root).frame
@@ -157,8 +157,8 @@ def vienna_sign_convention() -> dict:
     Perfect complement, single mismatch, and scrambled, to state the dG sign
     convention explicitly: a more negative dG (kcal/mol) is tighter binding.
     """
-    from cascade.features.seedmatch import revcomp
-    from cascade.features.thermo import require_vienna, seed_duplex_dg
+    from cel.features.seedmatch import revcomp
+    from cel.features.thermo import require_vienna, seed_duplex_dg
 
     require_vienna()
     guide = "UGGGGAAACGUACGUACGU"  # fixed; seed_duplex_dg hybridizes its seed (pos 2 to 8)
@@ -202,7 +202,7 @@ def run_t3(raw_dir: Path, cache_root: Path, seed: int, epochs: int, lr: float) -
     import torch
     from torch import nn
 
-    from cascade.models.kkt_projection import (
+    from cel.models.kkt_projection import (
         MassActionProjection,
         fit_mass_action_line,
         mass_action_residual,

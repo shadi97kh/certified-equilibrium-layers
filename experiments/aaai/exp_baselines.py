@@ -40,8 +40,8 @@ import numpy as np
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.features import concept_layout, featurize_pairs  # noqa: E402
-from cascade.features.seedmatch import revcomp  # noqa: E402
+from cel.features import concept_layout, featurize_pairs  # noqa: E402
+from cel.features.seedmatch import revcomp  # noqa: E402
 
 OUT = REPO / "results" / "aaai"
 # Cross-dataset transfer: the OligoFormer suite ships Katoh (Taka) and the pooled
@@ -140,7 +140,7 @@ def load_real_efficacy(raw_dir: Path, cache_root: Path) -> tuple[dict, dict, dic
     dataset is loaded best-effort; an absent one is recorded (with its source) and
     skipped, never fabricated.
     """
-    from cascade.data import load_huesken_efficacy, load_katoh, load_mix
+    from cel.data import load_huesken_efficacy, load_katoh, load_mix
 
     hue = load_huesken_efficacy(raw_dir, cache_root=cache_root)  # raises if absent
     feats, labels = {}, {}
@@ -210,7 +210,7 @@ def ridge_baseline(feats: dict, labels: dict) -> dict:
 def cascade_backbone(feats: dict, labels: dict, seed: int, epochs: int, lr: float) -> dict:
     import torch
 
-    from cascade.models import CCMPBackbone
+    from cel.models import CCMPBackbone
 
     torch.manual_seed(seed)
     std = _standardizer(feats["huesken_train"])
@@ -261,7 +261,7 @@ def efficacy_section(raw_dir: Path, cache_root: Path, seed: int, epochs: int, lr
 
 def offtarget_section(seedmatchr_dir: Path | None, cache_root: Path) -> dict:
     """SeedMatchR one-sided KS on the real GSE184929 DESeq2 log2FC, per contrast."""
-    from cascade.data import SEEDMATCHR_DATASETS, load_schlegel2022
+    from cel.data import SEEDMATCHR_DATASETS, load_schlegel2022
 
     per_contrast = {}
     pending = {}

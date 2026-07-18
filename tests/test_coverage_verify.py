@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 import scipy.sparse as sp
 
-from cascade.verify.containment import dense_propagation_operator
+from cel.verify.containment import dense_propagation_operator
 from certification import EdgeBernoulliNoise, bernstein_certificate
 
 COVERAGE_JSON = Path(__file__).resolve().parents[1] / "results" / "aaai" / "coverage.json"

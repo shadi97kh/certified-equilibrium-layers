@@ -40,9 +40,9 @@ import numpy as np
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.features.seedmatch import find_sites, to_rna  # noqa: E402
-from cascade.features.thermo import require_vienna  # noqa: E402
-from cascade.verify import offtarget_bound as ob  # noqa: E402
+from cel.features.seedmatch import find_sites, to_rna  # noqa: E402
+from cel.features.thermo import require_vienna  # noqa: E402
+from cel.verify import offtarget_bound as ob  # noqa: E402
 
 OUT = REPO / "results" / "aaai"
 SM_DIR = REPO / "data" / "raw" / "offtarget" / "seedmatchr"
@@ -161,7 +161,7 @@ def contrast_ks(ds: str, grn, alpha: float, inputs: dict) -> dict:
     """Measured + predicted (count and dG) one-sided KS for one contrast on mouse TRRUST."""
     import pandas as pd
 
-    from cascade.data.offtarget import seedmatch_ks_test
+    from cel.data.offtarget import seedmatch_ks_test
 
     idx = {sym.upper(): i for i, sym in enumerate(grn.nodes)}
     n = grn.n_nodes
@@ -257,7 +257,7 @@ def main() -> int:
         return 0
     try:
         require_vienna()
-        from cascade.data import load_trrust
+        from cel.data import load_trrust
 
         grn = load_trrust(species="mouse")
     except (FileNotFoundError, NotImplementedError, ImportError) as exc:

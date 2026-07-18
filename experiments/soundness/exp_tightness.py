@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Project 2 (AAAI): tightness of the matrix-Bernstein certified radius.
 
-Three claims about the certificate (cascade.certification.bernstein_certificate),
+Three claims about the certificate (cel.certification.bernstein_certificate),
 all formula-level / concentration properties (no propagation is applied, so this
 is independent of the coverage regime checked in exp_verify.py).
 

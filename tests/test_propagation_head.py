@@ -9,9 +9,9 @@ import pytest
 
 torch = pytest.importorskip("torch")
 
-from cascade.data import load_string_grn  # noqa: E402
-from cascade.models.propagation_head import PropagationHead  # noqa: E402
-from cascade.verify import containment as C  # noqa: E402
+from cel.data import load_string_grn  # noqa: E402
+from cel.models.propagation_head import PropagationHead  # noqa: E402
+from cel.verify import containment as C  # noqa: E402
 
 FIXTURE = Path(__file__).parent / "fixtures" / "string_tiny.txt"
 

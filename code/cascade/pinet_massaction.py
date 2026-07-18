@@ -77,9 +77,9 @@ class MassActionPolytopeProjection:
 
 def huesken_seed_dg(raw_dir: Path, cache_root: Path) -> tuple[np.ndarray, np.ndarray]:
     """Real Huesken knockdown + ViennaRNA seed-duplex dG (raises if absent)."""
-    from cascade.data import load_huesken_efficacy
-    from cascade.features.seedmatch import revcomp
-    from cascade.features.thermo import require_vienna, seed_duplex_dg
+    from cel.data import load_huesken_efficacy
+    from cel.features.seedmatch import revcomp
+    from cel.features.thermo import require_vienna, seed_duplex_dg
 
     require_vienna()
     frame = load_huesken_efficacy(raw_dir, cache_root=cache_root).frame

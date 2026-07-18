@@ -9,7 +9,7 @@ Two parts.
    ||S(A) - S(A_bar)||_op and the prediction deviation
    ||P_alpha(S(A)) x0 - P_alpha(S(A_bar)) x0||_2, and confirm they stay within
    the degree-concentration structure bound B_sym and the certified radius_sym
-   (cascade.certification.normalized_certificate) at least a 1 - delta fraction
+   (cel.certification.normalized_certificate) at least a 1 - delta fraction
    of the time.
 
 2. Breakdown. Build a STRING-like confidence graph and sweep the STRING
@@ -36,7 +36,7 @@ import scipy.sparse as sp
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.verify.containment import dense_propagation_operator  # noqa: E402
+from cel.verify.containment import dense_propagation_operator  # noqa: E402
 from certification import (  # noqa: E402
     EdgeBernoulliNoise,
     min_degree_diagnostic,

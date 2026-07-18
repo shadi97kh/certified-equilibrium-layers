@@ -12,7 +12,7 @@ import pytest
 
 torch = pytest.importorskip("torch")
 
-from cascade.models.ccmp_backbone import CCMPBackbone, default_concept_dims  # noqa: E402
+from cel.models.ccmp_backbone import CCMPBackbone, default_concept_dims  # noqa: E402
 
 DIMS = default_concept_dims()
 
