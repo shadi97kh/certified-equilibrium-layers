@@ -15,7 +15,7 @@ import pytest
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.experiments import ot_data_feasibility as feas  # noqa: E402
+from cel.experiments import ot_data_feasibility as feas  # noqa: E402
 
 RAW_PATEL = REPO / "data" / "raw" / "offtarget" / "patel" / "GSE164289_siGGGGGC_vs_siNT1_48h.csv"
 

@@ -17,7 +17,7 @@ sys.path.insert(0, str(REPO / "src"))
 pytest.importorskip("torch")
 import torch  # noqa: E402
 
-from cascade.models.rc_equivariant import (  # noqa: E402
+from cel.models.rc_equivariant import (  # noqa: E402
     RCEquivariantLinear,
     _real_guides,
     complement_permutation,

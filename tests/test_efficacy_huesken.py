@@ -20,7 +20,7 @@ sys.path.insert(0, str(REPO / "src"))
 pytest.importorskip("sklearn")
 pytest.importorskip("scipy")
 
-from cascade.experiments import efficacy_huesken as ex  # noqa: E402
+from cel.experiments import efficacy_huesken as ex  # noqa: E402
 
 REAL_EFFICACY = REPO / "data" / "raw" / "efficacy" / "huesken.csv"
 

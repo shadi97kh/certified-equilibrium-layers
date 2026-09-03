@@ -131,9 +131,9 @@ def train_efficacy():
     from sklearn.linear_model import Ridge
     from sklearn.preprocessing import StandardScaler
 
-    from cascade.data import load_huesken_efficacy
-    from cascade.features import featurize_pairs
-    from cascade.features.seedmatch import revcomp
+    from cel.data import load_huesken_efficacy
+    from cel.features import featurize_pairs
+    from cel.features.seedmatch import revcomp
 
     frame = load_huesken_efficacy(REPO / "data" / "raw" / "efficacy", cache_root=CACHE).frame
     anti = frame["antisense"].astype(str).tolist()
@@ -163,8 +163,8 @@ def main() -> int:
     try:
         from pyensembl import EnsemblRelease
 
-        from cascade.data import load_trrust
-        from cascade.verify import offtarget_bound as ob
+        from cel.data import load_trrust
+        from cel.verify import offtarget_bound as ob
 
         grn = load_trrust(species="mouse")
         release = EnsemblRelease(ENSEMBL_RELEASE, species="mouse")
@@ -258,7 +258,7 @@ def main() -> int:
         }
 
     # Repeat the yield landscape for a few real Huesken guide scaffolds (no D1/D4 there).
-    from cascade.data import load_huesken_efficacy
+    from cel.data import load_huesken_efficacy
 
     hf = load_huesken_efficacy(REPO / "data" / "raw" / "efficacy", cache_root=CACHE).frame
     huesken_targets = {}

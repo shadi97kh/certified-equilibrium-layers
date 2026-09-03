@@ -1,0 +1,5226 @@
+{
+  "certificate": {
+    "min_over_all_steps_all_seeds": 101.17722578088069,
+    "note": "D = 1 + sum_s x_s sigma'(f) >= 1 by construction (softplus K > 0, A1)",
+    "positive_every_step_every_seed": true,
+    "total_steps_checked": 3000
+  },
+  "comparison": {
+    "cohens_d": 1.2210906901349579,
+    "mean_difference_equilibrium_minus_feedforward": 0.01714198666386349,
+    "per_seed_ranges_overlap": true,
+    "range_gap_min_eq_minus_max_ff": -0.0352040402058294
+  },
+  "equilibrium": {
+    "max": 0.12206694907613008,
+    "mean": 0.1124322432812499,
+    "min": 0.08622712968479432,
+    "per_seed_heldout_mean_spearman": [
+      0.11815571819775585,
+      0.08622712968479432,
+      0.11762346033284425,
+      0.09137441022021213,
+      0.12206694907613008,
+      0.1217800490659261,
+      0.12073713984633397,
+      0.11082593934209298,
+      0.11817537892347917,
+      0.11735625812293023
+    ],
+    "sample_sd": 0.012904940004320763
+  },
+  "experiment": "seed sweep of the trainable equilibrium layer vs parameter-matched baseline",
+  "feedforward": {
+    "max": 0.12143116989062372,
+    "mean": 0.09529025661738641,
+    "min": 0.06854751199844003,
+    "per_seed_heldout_mean_spearman": [
+      0.0970321352832976,
+      0.0819664445667875,
+      0.09574568935515157,
+      0.09413861220321433,
+      0.12143116989062372,
+      0.09548680888513442,
+      0.06854751199844003,
+      0.10143060861539745,
+      0.11285705940827159,
+      0.08426652596754586
+    ],
+    "sample_sd": 0.015086680300415049
+  },
+  "heldout_mirnas": [
+    "lsy6",
+    "mir139",
+    "mir144",
+    "mir153"
+  ],
+  "hyperparameters_unchanged": {
+    "M_fraction": 0.2,
+    "epochs": 300,
+    "eps_K": 1e-06,
+    "eval_every": 10,
+    "hidden": 64,
+    "lr": 0.01,
+    "n_test_mirnas": 4,
+    "note": "only the seed varies across runs"
+  },
+  "n_seeds": 10,
+  "per_seed": [
+    {
+      "certificate_min_over_steps": 101.17722578088069,
+      "certificate_n_steps": 300,
+      "certificate_positive_every_step": true,
+      "equilibrium_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.10166219573240387
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09057549903401335
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.09934918296684134
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.10337887936735325
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.11052260009413525
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12491905033118364
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.12432629861487748
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.12346769709888786
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.12303253981320711
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.11912508289496426
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.11881417178786272
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.1202144604102044
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.12070876121309766
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.11970903560583337
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.12045983386342826
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.12097579380947023
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.12186221887004203
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.12051661875879671
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.12074946793882345
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.12176651261004696
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.12064310841751713
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.12193730128960358
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.1221115122893667
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.12153489384851135
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.11941593357941055
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.12010714613982856
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.1215579779054072
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11852370697646995
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.12192465052123756
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.12260254329650642
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.11815571819775585
+        }
+      ],
+      "equilibrium_heldout_mean_spearman": 0.11815571819775585,
+      "feedforward_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.1353420303706426
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.0935573005078097
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.10789880141704702
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.09885771988065734
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.09204524772722537
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.09142187876862863
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.0912608864501305
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.09378656505092561
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.08851165440560327
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.09534332748743357
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.09197660466744685
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.08471939395908372
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.09099362249778387
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.09314294281772273
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.08891844213728228
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.08730230062670112
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.08730660912425811
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.0971966954333999
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.09124547600226751
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.09408309578145888
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.09397100292777213
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.09457462224960796
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.1035710644071384
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.09661337353517382
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.08961871190148503
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.09282900989879694
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.0948648387599658
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.10235864052243908
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.09616205859710095
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.09754326149339712
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.0970321352832976
+        }
+      ],
+      "feedforward_heldout_mean_spearman": 0.0970321352832976,
+      "seed": 20240716
+    },
+    {
+      "certificate_min_over_steps": 135.96446860362553,
+      "certificate_n_steps": 300,
+      "certificate_positive_every_step": true,
+      "equilibrium_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.09281380776077533
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.08556472817951623
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.09063752786395983
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.0938656389614452
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.0941467134651078
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.09066652026970923
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.08564060411529671
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.08334317184933202
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.08667202464010565
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.08627028669706215
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.08837821642315163
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.08811293148748645
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.08657002390243676
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.08784045339906463
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.09116765658136748
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.09083925000348711
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.08924456594821575
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.0859408250938924
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.08439411087040619
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.08451855962634565
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.08547746532885586
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.08413911857369949
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.08586264972586714
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.08572624686338137
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.0866503266065795
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.08678626657680125
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.08387141996918654
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.08680397132023812
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.08825577235655648
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.08897032319476483
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.08622712968479432
+        }
+      ],
+      "equilibrium_heldout_mean_spearman": 0.08622712968479432,
+      "feedforward_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.013183489409807351
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.06840016494023288
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.09051024656301282
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.07816979044829153
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.0969038457812097
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.07952227777287085
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.07266138141163281
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.07357939675531908
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.0704280144430911
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.06913979586962862
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.07132886718215944
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.07627358984753826
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.07850734244370453
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.07971351838664056
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.08503173127877155
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.07654413191709325
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.07790886230850892
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.07816265588902363
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.07963017391348753
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.07335628275671355
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.08508540779892962
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.08187239850600674
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.08702892884314262
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.08839246752297934
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.08471328060329031
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.0859721260079704
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.08370553935296714
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.08460908454442334
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.08517556105634684
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.08444531346429268
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.0819664445667875
+        }
+      ],
+      "feedforward_heldout_mean_spearman": 0.0819664445667875,
+      "seed": 20240717
+    },
+    {
+      "certificate_min_over_steps": 355.9547484760173,
+      "certificate_n_steps": 300,
+      "certificate_positive_every_step": true,
+      "equilibrium_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.10353817981174909
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.08738188141034162
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.10567563996846333
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.11096682807301655
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.1262383420342234
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12599290147409545
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.12671633941795496
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.1255284840581268
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.1251617570290502
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.1228008362837266
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.12663651881377538
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.12614841637707144
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.12647290850615403
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.127533112665168
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.12581793940522154
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.12543979388623397
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.12711373573145632
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.1228570349010096
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.12409659359603831
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.12372273066582624
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.12365564059177532
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.12297984422922126
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.12207535165766506
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.12231894148988143
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.12158215019540847
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.11774573668378517
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.12232696806464692
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11904024469649654
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.11932950316935359
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.1187445358784039
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.11762346033284425
+        }
+      ],
+      "equilibrium_heldout_mean_spearman": 0.11762346033284425,
+      "feedforward_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.13355457798512926
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09709366715513126
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.0896545688493115
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.09083404346519283
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.08616454839899282
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.10686649198965137
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.11026112800312185
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.11309184560565033
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.11984166045618987
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.12055191508486715
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.1140129804750635
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.1080732742282363
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.11021199736501804
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.11073403375974436
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.11037435034736154
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.10622652224550086
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.10957826003001461
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.09852510782640714
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.1050708185692964
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.09956138797649702
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.09458524482916014
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.100396275766118
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.10133385578119569
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.08468989146640712
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.0889094134952978
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.10163096712655253
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.08041329126542492
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.09602335759820327
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.10592607561413528
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.09119593015776174
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.09574568935515157
+        }
+      ],
+      "feedforward_heldout_mean_spearman": 0.09574568935515157,
+      "seed": 20240718
+    },
+    {
+      "certificate_min_over_steps": 249.20175942808976,
+      "certificate_n_steps": 300,
+      "certificate_positive_every_step": true,
+      "equilibrium_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.11688634556200889
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09557062448870089
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.10479609107002616
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.11022553729604581
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.11049512830334757
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.10745984394542524
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.1043761605197507
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.10000113222589634
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.09479867037748309
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.09169814395846275
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.09480518914340666
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.09497537385362612
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.09718209315810102
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.09413374392111926
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.09766682948296847
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.09440029561036833
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.0998109212398469
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.09692346066636907
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.09681983702037801
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.09372690237705646
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.09710766350958533
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.09886308038954172
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.09525030614358224
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.09577945702031024
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.09493018134036688
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.094063959167669
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.09379759267358811
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.09221889420974617
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.09476042844985277
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.08853144727043205
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.09137441022021213
+        }
+      ],
+      "equilibrium_heldout_mean_spearman": 0.09137441022021213,
+      "feedforward_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.13951455512008878
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.10744979656848762
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.10471283807425044
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.08649829607443574
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.0922286888417427
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.09949548888818573
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.0989792833781509
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.09749661023929848
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.07541612706376699
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.07703908442617335
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.09081546335517604
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.08195418721578028
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.09309710244706404
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.09745592812689466
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.08656772142504629
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.08927837829784774
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.09639387080132096
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.08036957164074013
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.10092418243964849
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.08509157159882678
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.09777499016489913
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.09186378913562873
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.08457767433841233
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.10539027909907507
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.08448377309569954
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.088201816476598
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.10185731144124899
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.07956433745632584
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.08845205398368353
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.10515681713074224
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.09413861220321433
+        }
+      ],
+      "feedforward_heldout_mean_spearman": 0.09413861220321433,
+      "seed": 20240719
+    },
+    {
+      "certificate_min_over_steps": 171.47079295970866,
+      "certificate_n_steps": 300,
+      "certificate_positive_every_step": true,
+      "equilibrium_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.13137820745390827
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.10210994333348843
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.12788705440520848
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.13004430588642177
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.1282783005187752
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12837432239078334
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.12807497510780316
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.12698843699310552
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.12690087903014893
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.1256607965729501
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.12507728062285298
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.1263820839522315
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.12557282109628437
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.12697653552924076
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.12243983163048607
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.11954945848751679
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.12334872271093134
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.12281806442284916
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.12097987482064151
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.12088232567361303
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.12174538053264908
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.12262482337488015
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.12240993079280693
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.12088395239362978
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.12216120472378184
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.12216677327088835
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.12184472221621917
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.12417012438904909
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.12098273432404391
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.12390739745033093
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.12206694907613008
+        }
+      ],
+      "equilibrium_heldout_mean_spearman": 0.12206694907613008,
+      "feedforward_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.1404773775130752
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.11844007474362198
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.08518965802293971
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.11231910240902061
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.10762634027177724
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.1119771464491871
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.10834213089436757
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.09669908160134907
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.1014823328627398
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.1046972837242992
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.10752577348690323
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.10677903141087755
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.109388733003167
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.10965740355600073
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.11744927710245787
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.11583157819598212
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.11918171899406058
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.11787990823832573
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.11860849952623281
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.12083373683030303
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.12090074931770439
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.12244172759524688
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.12334667203043992
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.12606041303063056
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.12127583517468879
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.12424103487231702
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.12264955300008876
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.12397816415844784
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.12029115982877397
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.11967974746495086
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.12143116989062372
+        }
+      ],
+      "feedforward_heldout_mean_spearman": 0.12143116989062372,
+      "seed": 20240720
+    },
+    {
+      "certificate_min_over_steps": 283.1954797827,
+      "certificate_n_steps": 300,
+      "certificate_positive_every_step": true,
+      "equilibrium_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.10323357778784248
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09210481981695799
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.13283730127061558
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.12941368936099523
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.12771838295976445
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12387022272866778
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.11412240225238085
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.09938267792590849
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.0966092265345614
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.09669170407662595
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.09606299314243155
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.09964082699382358
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.09361628392572326
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.10229398108014069
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.10373460215111267
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.11331576041681178
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.11828127879275639
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.11994622691207417
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.11694439513506369
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.1199160987487871
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.12048893808143049
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.12170067151251243
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.12259000359140056
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.12212776064213703
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.12153535790404799
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.12181763315558114
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.12245837165827875
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11916178911382677
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.1167708972422015
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.11745479480582371
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.1217800490659261
+        }
+      ],
+      "equilibrium_heldout_mean_spearman": 0.1217800490659261,
+      "feedforward_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.14100436697092306
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.12249715074706898
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.09401916212516641
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.08886320862552782
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.10528043985076277
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.08755254175734976
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.08702377924032095
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.0820436414672812
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.0724363658964351
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.07553244399813074
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.0773422928133043
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.08182389208706842
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.08627793828307964
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.09221705198862415
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.09503815328532024
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.09163184291715215
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.09165448588596095
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.09476723122709012
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.09316385582177905
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.09186681284283216
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.09087212626051992
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.08894539341463256
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.09546245443335118
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.09012874638506285
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.09463649715816119
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.09258890782093251
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.09326181658453678
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.09886703951499784
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.09377759944694257
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.09852426979262627
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.09548680888513442
+        }
+      ],
+      "feedforward_heldout_mean_spearman": 0.09548680888513442,
+      "seed": 20240721
+    },
+    {
+      "certificate_min_over_steps": 122.17971218861798,
+      "certificate_n_steps": 300,
+      "certificate_positive_every_step": true,
+      "equilibrium_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.139594300372057
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09181958935966741
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.10216106939918088
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.12737259244702576
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.12722638973073241
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12550550119793746
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.11994315212582918
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.1205915649630648
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.12259926466646581
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.12225703958565937
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.12053409123487367
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.1207236492861253
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.12230153255402171
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.12159030908729615
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.1224657800853444
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.12354202385738032
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.12224325669623566
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.12286399404518687
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.12301710832184068
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.12397484022805026
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.12519171572628782
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.12333027379082086
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.12274643024083713
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.1216255258334404
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.1237190809392914
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.12358478562827505
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.12552448452113132
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.1237838487152991
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.12188907218854822
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.12111124162390921
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.12073713984633397
+        }
+      ],
+      "equilibrium_heldout_mean_spearman": 0.12073713984633397,
+      "feedforward_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.1288579744589089
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09215442043360951
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.0900228595513601
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.09001791475122797
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.09967078959782584
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.09897492478968342
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.10614638301172846
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.11008630585608001
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.10411722612142794
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.09313731695743512
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.07861897060814772
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.08395694323009602
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.06711444367633257
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.07155709030807891
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.07539733259152215
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.06971009834608846
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.06875587823361637
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.07083063152440706
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.06868177342713905
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.07415429500197775
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.07121688374725102
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.06973437574093826
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.07565416722465743
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.07140932820965315
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.07524457816361582
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.06916211131734697
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.07214590727034523
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.07156611851034961
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.07476042329970192
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.07347178626423079
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.06854751199844003
+        }
+      ],
+      "feedforward_heldout_mean_spearman": 0.06854751199844003,
+      "seed": 20240722
+    },
+    {
+      "certificate_min_over_steps": 103.99673555195767,
+      "certificate_n_steps": 300,
+      "certificate_positive_every_step": true,
+      "equilibrium_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.07861781639476256
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09535027566673476
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.10524487306993567
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.113099083841557
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.12295332327947531
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12212543723028113
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.11862742673465929
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.10904012902338138
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.10459551449683843
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.10156769374991194
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.09878341838160445
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.10459115097860866
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.10801634176465894
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.10726591960543014
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.10974987875839509
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.11442969913338959
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.10654919598576491
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.10903982419851749
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.11211429432499381
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.11561255242699807
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.11717443320261382
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.11550787633775586
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.11735791431409733
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.11542773838857497
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.11386622055677861
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.11034535169965448
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.11304521515063952
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11378196605178971
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.1121264763441613
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.10866261508681806
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.11082593934209298
+        }
+      ],
+      "equilibrium_heldout_mean_spearman": 0.11082593934209298,
+      "feedforward_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.10711338145406733
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.08642429512163445
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.08585321503178225
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.1185299899890514
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.09130500436134542
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.09329525927386474
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.09180600747070913
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.09235415823198735
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.09325819545179737
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.08899108742123125
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.08341644378978161
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.07859269484613535
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.07522249901433384
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.0705543117162068
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.06738433160749435
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.0652656576661961
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.06920133258089727
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.07318724065105944
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.06950667420620009
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.07108112037562671
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.0720558020912262
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.08752556821019672
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.08134068960262165
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.08861980413112117
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.09186507224749119
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.09413154524999276
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.09462227213595725
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.10796649584435188
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.09798010032128465
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.09766223912029118
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.10143060861539745
+        }
+      ],
+      "feedforward_heldout_mean_spearman": 0.10143060861539745,
+      "seed": 20240723
+    },
+    {
+      "certificate_min_over_steps": 500.0088006116922,
+      "certificate_n_steps": 300,
+      "certificate_positive_every_step": true,
+      "equilibrium_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.139031707557801
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09196794094876894
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.11192367617942836
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.12543188856981222
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.12585810194805488
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12605505076702242
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.12593943473175706
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.1257324205399347
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.1255862821147874
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.12538900998155997
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.12372351625331421
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.12294607764591654
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.12297853554445007
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.12193469374100856
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.12033809298996237
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.12098627230175715
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.11890656037318734
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.11540378810959054
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.12032851330407543
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.11279433358755532
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.10597663407599829
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.09752812169201826
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.09315092186976684
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.09266499778468004
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.09202344487880967
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.09413077224010372
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.10250089753000724
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11748807683561101
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.11950606776283186
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.1199273249432927
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.11817537892347917
+        }
+      ],
+      "equilibrium_heldout_mean_spearman": 0.11817537892347917,
+      "feedforward_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.06379940059971803
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.07870977081564465
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.08994139775833598
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.10138778154368752
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.09264791646512108
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.09234758048779473
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.08931408097849716
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.08736891043114484
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.07694064536861686
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.06987752689230461
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.07485548200830427
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.08504163966019262
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.09435564651158858
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.10242372422684065
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.09682764122743553
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.09828998723137038
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.1088410506230239
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.10491140260581586
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.10495419215505458
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.1073899081014475
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.1069626423244628
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.1056382795991272
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.10625118784951823
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.11043544181084096
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.0986216591308057
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.10282156931984562
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.10805673486515019
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11358793072394853
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.11074602566106734
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.11131509543490187
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.11285705940827159
+        }
+      ],
+      "feedforward_heldout_mean_spearman": 0.11285705940827159,
+      "seed": 20240724
+    },
+    {
+      "certificate_min_over_steps": 161.79433307485522,
+      "certificate_n_steps": 300,
+      "certificate_positive_every_step": true,
+      "equilibrium_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.11557088132508644
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.08740504202475535
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.09833827180565631
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.10173888611988255
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.10213723545248181
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.10702607371788908
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.11098911126336442
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.11174001554740381
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.11751041522983098
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.1202673810307674
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.12048593318350116
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.1186922428652886
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.11655960644367003
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.12067941682388261
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.1198299398074649
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.11975883387965051
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.11736761481262717
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.11898090155632735
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.11872902293632098
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.11621231464915552
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.11982811744688522
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.11979813800350061
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.12008056281668825
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.11911477371991733
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.11605979068005909
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.11355520233720048
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.11715426658174985
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11879489533074525
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.11810789369201308
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.11355463453253227
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.11735625812293023
+        }
+      ],
+      "equilibrium_heldout_mean_spearman": 0.11735625812293023,
+      "feedforward_heldout_curve": [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.10774121861150202
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.10861388858585935
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.08927534711922952
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.10294760387026068
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.11793988668655535
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.11210869225793861
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.10768011176396236
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.09789680023413466
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.0893411061742068
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.08311643408518934
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.08891396375254415
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.09123501085107885
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.08625753500787318
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.08582353510102589
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.09170010194568576
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.08660779114331202
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.08575960662372972
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.09502186997116768
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.09568538409378324
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.09400004959972175
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.08114850307365001
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.09785111817711037
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.07712889497643044
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.08822967672121126
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.08359625346541152
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.07744129067141887
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.09205470220543184
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.07237609686797548
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.09514323671412173
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.07837077744905209
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.08426652596754586
+        }
+      ],
+      "feedforward_heldout_mean_spearman": 0.08426652596754586,
+      "seed": 20240725
+    }
+  ],
+  "per_seed_curves": {
+    "equilibrium": [
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.10166219573240387
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09057549903401335
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.09934918296684134
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.10337887936735325
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.11052260009413525
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12491905033118364
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.12432629861487748
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.12346769709888786
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.12303253981320711
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.11912508289496426
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.11881417178786272
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.1202144604102044
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.12070876121309766
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.11970903560583337
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.12045983386342826
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.12097579380947023
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.12186221887004203
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.12051661875879671
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.12074946793882345
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.12176651261004696
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.12064310841751713
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.12193730128960358
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.1221115122893667
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.12153489384851135
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.11941593357941055
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.12010714613982856
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.1215579779054072
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11852370697646995
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.12192465052123756
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.12260254329650642
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.11815571819775585
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.09281380776077533
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.08556472817951623
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.09063752786395983
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.0938656389614452
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.0941467134651078
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.09066652026970923
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.08564060411529671
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.08334317184933202
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.08667202464010565
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.08627028669706215
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.08837821642315163
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.08811293148748645
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.08657002390243676
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.08784045339906463
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.09116765658136748
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.09083925000348711
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.08924456594821575
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.0859408250938924
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.08439411087040619
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.08451855962634565
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.08547746532885586
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.08413911857369949
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.08586264972586714
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.08572624686338137
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.0866503266065795
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.08678626657680125
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.08387141996918654
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.08680397132023812
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.08825577235655648
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.08897032319476483
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.08622712968479432
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.10353817981174909
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.08738188141034162
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.10567563996846333
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.11096682807301655
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.1262383420342234
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12599290147409545
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.12671633941795496
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.1255284840581268
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.1251617570290502
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.1228008362837266
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.12663651881377538
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.12614841637707144
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.12647290850615403
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.127533112665168
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.12581793940522154
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.12543979388623397
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.12711373573145632
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.1228570349010096
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.12409659359603831
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.12372273066582624
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.12365564059177532
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.12297984422922126
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.12207535165766506
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.12231894148988143
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.12158215019540847
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.11774573668378517
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.12232696806464692
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11904024469649654
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.11932950316935359
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.1187445358784039
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.11762346033284425
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.11688634556200889
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09557062448870089
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.10479609107002616
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.11022553729604581
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.11049512830334757
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.10745984394542524
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.1043761605197507
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.10000113222589634
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.09479867037748309
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.09169814395846275
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.09480518914340666
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.09497537385362612
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.09718209315810102
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.09413374392111926
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.09766682948296847
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.09440029561036833
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.0998109212398469
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.09692346066636907
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.09681983702037801
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.09372690237705646
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.09710766350958533
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.09886308038954172
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.09525030614358224
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.09577945702031024
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.09493018134036688
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.094063959167669
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.09379759267358811
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.09221889420974617
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.09476042844985277
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.08853144727043205
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.09137441022021213
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.13137820745390827
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.10210994333348843
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.12788705440520848
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.13004430588642177
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.1282783005187752
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12837432239078334
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.12807497510780316
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.12698843699310552
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.12690087903014893
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.1256607965729501
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.12507728062285298
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.1263820839522315
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.12557282109628437
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.12697653552924076
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.12243983163048607
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.11954945848751679
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.12334872271093134
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.12281806442284916
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.12097987482064151
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.12088232567361303
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.12174538053264908
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.12262482337488015
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.12240993079280693
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.12088395239362978
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.12216120472378184
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.12216677327088835
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.12184472221621917
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.12417012438904909
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.12098273432404391
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.12390739745033093
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.12206694907613008
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.10323357778784248
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09210481981695799
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.13283730127061558
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.12941368936099523
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.12771838295976445
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12387022272866778
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.11412240225238085
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.09938267792590849
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.0966092265345614
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.09669170407662595
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.09606299314243155
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.09964082699382358
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.09361628392572326
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.10229398108014069
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.10373460215111267
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.11331576041681178
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.11828127879275639
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.11994622691207417
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.11694439513506369
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.1199160987487871
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.12048893808143049
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.12170067151251243
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.12259000359140056
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.12212776064213703
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.12153535790404799
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.12181763315558114
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.12245837165827875
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11916178911382677
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.1167708972422015
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.11745479480582371
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.1217800490659261
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.139594300372057
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09181958935966741
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.10216106939918088
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.12737259244702576
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.12722638973073241
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12550550119793746
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.11994315212582918
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.1205915649630648
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.12259926466646581
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.12225703958565937
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.12053409123487367
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.1207236492861253
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.12230153255402171
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.12159030908729615
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.1224657800853444
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.12354202385738032
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.12224325669623566
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.12286399404518687
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.12301710832184068
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.12397484022805026
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.12519171572628782
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.12333027379082086
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.12274643024083713
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.1216255258334404
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.1237190809392914
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.12358478562827505
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.12552448452113132
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.1237838487152991
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.12188907218854822
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.12111124162390921
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.12073713984633397
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.07861781639476256
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09535027566673476
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.10524487306993567
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.113099083841557
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.12295332327947531
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12212543723028113
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.11862742673465929
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.10904012902338138
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.10459551449683843
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.10156769374991194
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.09878341838160445
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.10459115097860866
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.10801634176465894
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.10726591960543014
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.10974987875839509
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.11442969913338959
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.10654919598576491
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.10903982419851749
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.11211429432499381
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.11561255242699807
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.11717443320261382
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.11550787633775586
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.11735791431409733
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.11542773838857497
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.11386622055677861
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.11034535169965448
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.11304521515063952
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11378196605178971
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.1121264763441613
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.10866261508681806
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.11082593934209298
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.139031707557801
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09196794094876894
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.11192367617942836
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.12543188856981222
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.12585810194805488
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.12605505076702242
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.12593943473175706
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.1257324205399347
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.1255862821147874
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.12538900998155997
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.12372351625331421
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.12294607764591654
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.12297853554445007
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.12193469374100856
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.12033809298996237
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.12098627230175715
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.11890656037318734
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.11540378810959054
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.12032851330407543
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.11279433358755532
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.10597663407599829
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.09752812169201826
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.09315092186976684
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.09266499778468004
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.09202344487880967
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.09413077224010372
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.10250089753000724
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11748807683561101
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.11950606776283186
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.1199273249432927
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.11817537892347917
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.11557088132508644
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.08740504202475535
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.09833827180565631
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.10173888611988255
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.10213723545248181
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.10702607371788908
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.11098911126336442
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.11174001554740381
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.11751041522983098
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.1202673810307674
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.12048593318350116
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.1186922428652886
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.11655960644367003
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.12067941682388261
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.1198299398074649
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.11975883387965051
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.11736761481262717
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.11898090155632735
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.11872902293632098
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.11621231464915552
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.11982811744688522
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.11979813800350061
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.12008056281668825
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.11911477371991733
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.11605979068005909
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.11355520233720048
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.11715426658174985
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11879489533074525
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.11810789369201308
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.11355463453253227
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.11735625812293023
+        }
+      ]
+    ],
+    "feedforward": [
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.1353420303706426
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.0935573005078097
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.10789880141704702
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.09885771988065734
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.09204524772722537
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.09142187876862863
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.0912608864501305
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.09378656505092561
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.08851165440560327
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.09534332748743357
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.09197660466744685
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.08471939395908372
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.09099362249778387
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.09314294281772273
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.08891844213728228
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.08730230062670112
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.08730660912425811
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.0971966954333999
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.09124547600226751
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.09408309578145888
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.09397100292777213
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.09457462224960796
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.1035710644071384
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.09661337353517382
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.08961871190148503
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.09282900989879694
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.0948648387599658
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.10235864052243908
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.09616205859710095
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.09754326149339712
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.0970321352832976
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.013183489409807351
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.06840016494023288
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.09051024656301282
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.07816979044829153
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.0969038457812097
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.07952227777287085
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.07266138141163281
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.07357939675531908
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.0704280144430911
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.06913979586962862
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.07132886718215944
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.07627358984753826
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.07850734244370453
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.07971351838664056
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.08503173127877155
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.07654413191709325
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.07790886230850892
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.07816265588902363
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.07963017391348753
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.07335628275671355
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.08508540779892962
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.08187239850600674
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.08702892884314262
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.08839246752297934
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.08471328060329031
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.0859721260079704
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.08370553935296714
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.08460908454442334
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.08517556105634684
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.08444531346429268
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.0819664445667875
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.13355457798512926
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09709366715513126
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.0896545688493115
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.09083404346519283
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.08616454839899282
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.10686649198965137
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.11026112800312185
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.11309184560565033
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.11984166045618987
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.12055191508486715
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.1140129804750635
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.1080732742282363
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.11021199736501804
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.11073403375974436
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.11037435034736154
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.10622652224550086
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.10957826003001461
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.09852510782640714
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.1050708185692964
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.09956138797649702
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.09458524482916014
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.100396275766118
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.10133385578119569
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.08468989146640712
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.0889094134952978
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.10163096712655253
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.08041329126542492
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.09602335759820327
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.10592607561413528
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.09119593015776174
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.09574568935515157
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.13951455512008878
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.10744979656848762
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.10471283807425044
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.08649829607443574
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.0922286888417427
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.09949548888818573
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.0989792833781509
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.09749661023929848
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.07541612706376699
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.07703908442617335
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.09081546335517604
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.08195418721578028
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.09309710244706404
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.09745592812689466
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.08656772142504629
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.08927837829784774
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.09639387080132096
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.08036957164074013
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.10092418243964849
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.08509157159882678
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.09777499016489913
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.09186378913562873
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.08457767433841233
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.10539027909907507
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.08448377309569954
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.088201816476598
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.10185731144124899
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.07956433745632584
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.08845205398368353
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.10515681713074224
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.09413861220321433
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.1404773775130752
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.11844007474362198
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.08518965802293971
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.11231910240902061
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.10762634027177724
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.1119771464491871
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.10834213089436757
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.09669908160134907
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.1014823328627398
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.1046972837242992
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.10752577348690323
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.10677903141087755
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.109388733003167
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.10965740355600073
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.11744927710245787
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.11583157819598212
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.11918171899406058
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.11787990823832573
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.11860849952623281
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.12083373683030303
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.12090074931770439
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.12244172759524688
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.12334667203043992
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.12606041303063056
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.12127583517468879
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.12424103487231702
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.12264955300008876
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.12397816415844784
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.12029115982877397
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.11967974746495086
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.12143116989062372
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.14100436697092306
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.12249715074706898
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.09401916212516641
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.08886320862552782
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.10528043985076277
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.08755254175734976
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.08702377924032095
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.0820436414672812
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.0724363658964351
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.07553244399813074
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.0773422928133043
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.08182389208706842
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.08627793828307964
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.09221705198862415
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.09503815328532024
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.09163184291715215
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.09165448588596095
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.09476723122709012
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.09316385582177905
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.09186681284283216
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.09087212626051992
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.08894539341463256
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.09546245443335118
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.09012874638506285
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.09463649715816119
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.09258890782093251
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.09326181658453678
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.09886703951499784
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.09377759944694257
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.09852426979262627
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.09548680888513442
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.1288579744589089
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.09215442043360951
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.0900228595513601
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.09001791475122797
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.09967078959782584
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.09897492478968342
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.10614638301172846
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.11008630585608001
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.10411722612142794
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.09313731695743512
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.07861897060814772
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.08395694323009602
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.06711444367633257
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.07155709030807891
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.07539733259152215
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.06971009834608846
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.06875587823361637
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.07083063152440706
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.06868177342713905
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.07415429500197775
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.07121688374725102
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.06973437574093826
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.07565416722465743
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.07140932820965315
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.07524457816361582
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.06916211131734697
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.07214590727034523
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.07156611851034961
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.07476042329970192
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.07347178626423079
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.06854751199844003
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.10711338145406733
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.08642429512163445
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.08585321503178225
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.1185299899890514
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.09130500436134542
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.09329525927386474
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.09180600747070913
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.09235415823198735
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.09325819545179737
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.08899108742123125
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.08341644378978161
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.07859269484613535
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.07522249901433384
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.0705543117162068
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.06738433160749435
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.0652656576661961
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.06920133258089727
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.07318724065105944
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.06950667420620009
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.07108112037562671
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.0720558020912262
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.08752556821019672
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.08134068960262165
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.08861980413112117
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.09186507224749119
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.09413154524999276
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.09462227213595725
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.10796649584435188
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.09798010032128465
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.09766223912029118
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.10143060861539745
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.06379940059971803
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.07870977081564465
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.08994139775833598
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.10138778154368752
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.09264791646512108
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.09234758048779473
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.08931408097849716
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.08736891043114484
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.07694064536861686
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.06987752689230461
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.07485548200830427
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.08504163966019262
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.09435564651158858
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.10242372422684065
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.09682764122743553
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.09828998723137038
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.1088410506230239
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.10491140260581586
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.10495419215505458
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.1073899081014475
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.1069626423244628
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.1056382795991272
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.10625118784951823
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.11043544181084096
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.0986216591308057
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.10282156931984562
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.10805673486515019
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.11358793072394853
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.11074602566106734
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.11131509543490187
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.11285705940827159
+        }
+      ],
+      [
+        {
+          "epoch": 0,
+          "heldout_mean_spearman": 0.10774121861150202
+        },
+        {
+          "epoch": 10,
+          "heldout_mean_spearman": 0.10861388858585935
+        },
+        {
+          "epoch": 20,
+          "heldout_mean_spearman": 0.08927534711922952
+        },
+        {
+          "epoch": 30,
+          "heldout_mean_spearman": 0.10294760387026068
+        },
+        {
+          "epoch": 40,
+          "heldout_mean_spearman": 0.11793988668655535
+        },
+        {
+          "epoch": 50,
+          "heldout_mean_spearman": 0.11210869225793861
+        },
+        {
+          "epoch": 60,
+          "heldout_mean_spearman": 0.10768011176396236
+        },
+        {
+          "epoch": 70,
+          "heldout_mean_spearman": 0.09789680023413466
+        },
+        {
+          "epoch": 80,
+          "heldout_mean_spearman": 0.0893411061742068
+        },
+        {
+          "epoch": 90,
+          "heldout_mean_spearman": 0.08311643408518934
+        },
+        {
+          "epoch": 100,
+          "heldout_mean_spearman": 0.08891396375254415
+        },
+        {
+          "epoch": 110,
+          "heldout_mean_spearman": 0.09123501085107885
+        },
+        {
+          "epoch": 120,
+          "heldout_mean_spearman": 0.08625753500787318
+        },
+        {
+          "epoch": 130,
+          "heldout_mean_spearman": 0.08582353510102589
+        },
+        {
+          "epoch": 140,
+          "heldout_mean_spearman": 0.09170010194568576
+        },
+        {
+          "epoch": 150,
+          "heldout_mean_spearman": 0.08660779114331202
+        },
+        {
+          "epoch": 160,
+          "heldout_mean_spearman": 0.08575960662372972
+        },
+        {
+          "epoch": 170,
+          "heldout_mean_spearman": 0.09502186997116768
+        },
+        {
+          "epoch": 180,
+          "heldout_mean_spearman": 0.09568538409378324
+        },
+        {
+          "epoch": 190,
+          "heldout_mean_spearman": 0.09400004959972175
+        },
+        {
+          "epoch": 200,
+          "heldout_mean_spearman": 0.08114850307365001
+        },
+        {
+          "epoch": 210,
+          "heldout_mean_spearman": 0.09785111817711037
+        },
+        {
+          "epoch": 220,
+          "heldout_mean_spearman": 0.07712889497643044
+        },
+        {
+          "epoch": 230,
+          "heldout_mean_spearman": 0.08822967672121126
+        },
+        {
+          "epoch": 240,
+          "heldout_mean_spearman": 0.08359625346541152
+        },
+        {
+          "epoch": 250,
+          "heldout_mean_spearman": 0.07744129067141887
+        },
+        {
+          "epoch": 260,
+          "heldout_mean_spearman": 0.09205470220543184
+        },
+        {
+          "epoch": 270,
+          "heldout_mean_spearman": 0.07237609686797548
+        },
+        {
+          "epoch": 280,
+          "heldout_mean_spearman": 0.09514323671412173
+        },
+        {
+          "epoch": 290,
+          "heldout_mean_spearman": 0.07837077744905209
+        },
+        {
+          "epoch": 299,
+          "heldout_mean_spearman": 0.08426652596754586
+        }
+      ]
+    ]
+  },
+  "reused_path": "scripts/learned_layer.py (build_pools, split_mirnas, assemble, set_determinism, EquilibriumLayer, Baseline, train_model), unmodified",
+  "seeds": [
+    20240716,
+    20240717,
+    20240718,
+    20240719,
+    20240720,
+    20240721,
+    20240722,
+    20240723,
+    20240724,
+    20240725
+  ],
+  "split_seed": 20240716,
+  "train_mirnas": [
+    "let7",
+    "mir1",
+    "mir124",
+    "mir137",
+    "mir143",
+    "mir155",
+    "mir182",
+    "mir199a",
+    "mir204",
+    "mir205",
+    "mir216b",
+    "mir223",
+    "mir7"
+  ],
+  "verdict": "MEASURED PARITY: equilibrium 0.1124 +/- 0.0129 vs feedforward 0.0953 +/- 0.0151 (mean diff +0.0171, Cohen's d 1.22, per-seed ranges overlap)"
+}

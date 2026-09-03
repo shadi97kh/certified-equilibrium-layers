@@ -9,8 +9,8 @@ import numpy as np
 import pytest
 import scipy.sparse as sp
 
-from cascade.data import load_string_confidence
-from cascade.verify.containment import dense_propagation_operator
+from cel.data import load_string_confidence
+from cel.verify.containment import dense_propagation_operator
 from certification import (
     EdgeBernoulliNoise,
     bernstein_b,

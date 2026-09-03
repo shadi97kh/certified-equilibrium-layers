@@ -3,13 +3,13 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "cascade"
+name = "certified-equilibrium-layers"
 version = "0.0.0"
-description = "Interpretable GNN for siRNA seed-mediated off-target prediction"
+description = "Certified comparative statics for conservation-law equilibrium layers, applied to siRNA off-target competition"
 readme = "README.md"
 requires-python = "==3.11.*"
 license = { text = "MIT" }
-authors = [{ name = "CASCADE authors" }]
+authors = [{ name = "certified-equilibrium-layers authors" }]
 keywords = ["siRNA", "GNN", "off-target", "PAC-Bayes", "interpretability"]
 classifiers = [
     "Programming Language :: Python :: 3.11",
@@ -48,11 +48,11 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/shadi97kh/ICLR2026"
+Homepage = "https://github.com/shadi97kh/certified-equilibrium-layers"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["cascade*", "certification*"]
+include = ["cel*", "certification*"]
 
 [tool.setuptools.package-dir]
 "" = "src"

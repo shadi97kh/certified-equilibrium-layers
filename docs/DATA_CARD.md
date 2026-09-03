@@ -11,7 +11,7 @@ loader.
 The data layer holds ONLY real measured data. Per the hard data policy
 ([OUTLINE.md](../OUTLINE.md)), no generated data sits on any AAAI reported-number
 path; `scripts/assert_no_synthetic.py` enforces this in CI. Every dataset carries
-one of two real-data roles (`cascade.data.roles`):
+one of two real-data roles (`cel.data.roles`):
 
 - `efficacy_backbone`: on-target siRNA potency datasets. They measure how well a
   guide knocks down its INTENDED target. They do NOT validate the off-target
@@ -39,7 +39,7 @@ biological claim".
 | SeedSeq | Das 2013 (SeedSeq) | aggregated union | various | microarray (aggregated) | off-target | offtarget_certification |
 
 The OligoFormer suite totals 3714 siRNAs across 75 mRNAs. The whole suite is
-loaded by `cascade.data.load_oligoformer_efficacy` into one tidy table with the
+loaded by `cel.data.load_oligoformer_efficacy` into one tidy table with the
 antisense and sense sequences, target mRNA id, measured efficacy in [0, 1],
 source study, cell line, and assay.
 
@@ -53,7 +53,7 @@ off-target evidence.
 
 - **Huesken 2005.** 2431 siRNAs across 34 mRNA targets, human H1299, branched-DNA
   residual-mRNA readout. Normalized knockdown efficacy in [0, 1]. Standard split
-  2182 train / 249 test (`cascade.data.load_huesken`). Originally a journal
+  2182 train / 249 test (`cel.data.load_huesken`). Originally a journal
   supplementary table; place at `data/raw/Huesken/huesken_2005.tsv` or pull the
   parsed CSV from the OligoFormer / siRNADiscovery release.
 - **Katoh (Taka).** 702 siRNAs, luciferase reporter in HeLa.
@@ -69,7 +69,7 @@ off-target evidence.
   validation set) rather than re-parsing the raw journal supplements. The loader
   is column-name tolerant and percent efficacies are rescaled to [0, 1].
 
-### Per-study REAL loaders (`cascade.data.efficacy`)
+### Per-study REAL loaders (`cel.data.efficacy`)
 
 REAL DATA ONLY. Each per-study loader reads `data/raw/efficacy/<study>.csv` (or
 selects the study's rows out of a `siRNAEfficacyDB` master table) and RAISES
@@ -99,7 +99,7 @@ synthetic fallback on any of these paths.
   seed-destabilization RNA-seq in rat liver, Ttr-targeting guides D1 and D4 at
   10 and 30 mg/kg; per-transcript DESeq2 log2 fold-change versus vehicle across
   the four contrasts `D1_10mg`, `D1_30mg`, `D4_10mg`, `D4_30mg`
-  (`cascade.data.load_gse184929`). URL
+  (`cel.data.load_gse184929`). URL
   https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE184929 . This is the
   highest-resolution off-target set used here. REAL.
 
@@ -110,13 +110,13 @@ synthetic fallback on any of these paths.
     `...groupD4_30mkg`, `GSE184929_Fig3-TTR-1_groupD1_10mkg`,
     `.vs.Mock.DESeq2.txt.gz`) and gunzips them to `data/raw/offtarget/seedmatchr/`
     as `<dataset>.csv` (32883 rat genes; columns `ensembl_gene_id`, `baseMean`,
-    `log2FoldChange`, `pvalue`, `padj`, `symbol`). `cascade.data.load_schlegel2022`
+    `log2FoldChange`, `pvalue`, `padj`, `symbol`). `cel.data.load_schlegel2022`
     reads these directly (per-transcript `log2fc`, `pvalue`, `padj`) and raises with
     the exact source if absent. REAL DATA ONLY: no fallback.
   - **Seed-match annotation (tracked next step).** The GEO tables carry no
     seed-match column, so `has_seed_annotation` is False and the Theorem-4 KS test
     is reported PENDING until the annotation is wired. It is computed NATIVELY in
-    Python (`cascade.features.seedmatch`) from a rat 3'UTR reference and the verified
+    Python (`cel.features.seedmatch`) from a rat 3'UTR reference and the verified
     Ttr guide, not via R. The D4 guide is not yet verified against Schlegel 2022.
   - **SeedMatchR R route (equivalent, optional).** The archived SeedMatchR package
     re-serves the same tables via AnnotationHub; `scripts/export_seedmatchr_data.R`
@@ -140,13 +140,13 @@ synthetic fallback on any of these paths.
 - **Jackson 2003 and Jackson 2006 (microarray).** Microarray off-target
   signatures: down-regulated transcripts with 3'UTR seed complementarity. Some
   tables live in the paper supplements rather than a clean GEO matrix, so
-  `cascade.data.load_jackson2003` / `load_jackson2006` parse the supplement
+  `cel.data.load_jackson2003` / `load_jackson2006` parse the supplement
   tables and record the provenance string; where a GEO accession exists, point
   the loader at it instead.
 - **Birmingham 2006 (microarray).** Seed-match off-target associations
-  (`cascade.data.load_birmingham2006`).
+  (`cel.data.load_birmingham2006`).
 - **SeedSeq (Das 2013).** The aggregated off-target transcriptome table, loaded
-  by `cascade.data.load_seedseq` as a convenience union over the above with a
+  by `cel.data.load_seedseq` as a convenience union over the above with a
   `source` flag on every off-target call. If no aggregated table is present, the
   loader builds the union from whichever member sources are available.
 - **Loader output.** Each off-target loader returns the siRNA id, antisense,
@@ -173,8 +173,8 @@ the data layer and outside `experiments/aaai/`, so the hard data policy
 
 ## Graph backbones
 
-Two flavors feed the P_alpha propagation operator (`cascade.data.grn`,
-propagation reused from `cascade.verify.containment`). Fetch the signed/directed
+Two flavors feed the P_alpha propagation operator (`cel.data.grn`,
+propagation reused from `cel.verify.containment`). Fetch the signed/directed
 files with `scripts/download_grn.sh`; loaders RAISE with the exact URL if absent.
 
 | Network | Loader | Source / URL | Signed? | Directed? | Real? |
@@ -184,7 +184,7 @@ files with `scripts/download_grn.sh`; loaders RAISE with the exact URL if absent
 | STRING v12.0 | `load_string_undirected` / `load_string_grn` | https://string-db.org | NO (unsigned) | NO (undirected) | REAL |
 
 - **Signed / directed (Theorem 2).** TRRUST v2 and DoRothEA give curated, signed,
-  directed TF-target edges. `cascade.data.load_trrust` / `load_dorothea` build a
+  directed TF-target edges. `cel.data.load_trrust` / `load_dorothea` build a
   signed, directed, row-normalized transition `S` whose absolute value is row
   sub-stochastic, so the spectral radius rho(S) <= 1; they expose the sparse `S`,
   the +1 / -1 sign pattern (`.signs`), rho(S) (`.spectral_radius()`), and the
@@ -197,9 +197,9 @@ files with `scripts/download_grn.sh`; loaders RAISE with the exact URL if absent
   (0 to 1000). Edges with `combined_score >= threshold` (default 700) are kept;
   the adjacency is symmetric (max over both directions), weighted by
   `combined_score / 1000`, and symmetric-normalized as S = D^(-1/2) A D^(-1/2)
-  (`cascade.data.load_string_grn`). STRING edges are UNDIRECTED and UNSIGNED, so
+  (`cel.data.load_string_grn`). STRING edges are UNDIRECTED and UNSIGNED, so
   this is the undirected variant (`load_string_undirected`), NOT the
-  signed/directed T2 network. `cascade.data.load_string_confidence` returns the
+  signed/directed T2 network. `cel.data.load_string_confidence` returns the
   raw confidence adjacency A_bar used by the random-subgraph noise model.
 - **Reactome** is a tracked gap (a stub graph builder with a visible xfail
   test); see OUTLINE.md.
@@ -208,7 +208,7 @@ files with `scripts/download_grn.sh`; loaders RAISE with the exact URL if absent
 
 The real seed-duplex thermodynamics and target-site accessibility are computed
 from sequence with ViennaRNA (Turner parameters), not downloaded:
-`cascade.features.thermo.seed_duplex_dg` (seed dG via `RNA.duplexfold`),
+`cel.features.thermo.seed_duplex_dg` (seed dG via `RNA.duplexfold`),
 `site_opening_energy` (partition-function unpaired probabilities), and
 `thermo_input_vector` (the input vector e for T4). These REQUIRE ViennaRNA and
 RAISE with the install command when it is absent (REAL DATA ONLY; the K=9 feature

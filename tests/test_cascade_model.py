@@ -6,9 +6,9 @@ import pytest
 
 torch = pytest.importorskip("torch")
 
-from cascade.models.cascade import CASCADE  # noqa: E402
-from cascade.models.ccmp_backbone import CCMPBackbone, default_concept_dims  # noqa: E402
-from cascade.models.propagation_head import PropagationHead  # noqa: E402
+from cel.models.cascade import CASCADE  # noqa: E402
+from cel.models.ccmp_backbone import CCMPBackbone, default_concept_dims  # noqa: E402
+from cel.models.propagation_head import PropagationHead  # noqa: E402
 
 
 def _model() -> CASCADE:

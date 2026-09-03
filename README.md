@@ -1,11 +1,10 @@
 # Certified-Monotone Equilibrium Layers, with an Application to siRNA Off-Target Competition
 
-
 Interpretable modeling of siRNA seed-mediated off-target activity and competitive
 endogenous RNA (ceRNA) derepression, built on a certified conservation-law equilibrium
-operator with provable comparative statics.
+operator with provable comparative statics. The Python package is importable as `cel`.
 
-CASCADE extends CCMP (FiLM-conditioned per-concept heterogeneous message passing, K=9
+This work extends CCMP (FiLM-conditioned per-concept heterogeneous message passing, K=9
 concept channels) and preserves its by-construction zero cross-concept leakage property
 (L_k = 0). The full project contract, including hard engineering rules, lives in
 [OUTLINE.md](OUTLINE.md).
@@ -53,6 +52,31 @@ while reaching magnitude parity with a same-capacity feedforward baseline that s
 cannot express competitor coupling).
 
 ## Figures
+
+### Operator schematic
+
+![Conservation-law equilibrium operator](results/figures/fig1_operator_schematic.png)
+
+How the certified operator works, on a four-transcript instance (one on-target plus 8mer,
+7mer-m8 and 6mer seed off-targets).
+
+(a) The conserved pool `M` splits into free guide `f` and the guide sequestered by every
+site, `sum_j x_j sigma_j(f)`. Weaker seed matches carry larger `K_j` and therefore lower
+equilibrium occupancy `theta_j`, so the whole occupancy profile is set by the single scalar
+`f`.
+
+(b) A change in the on-target affinity `K` moves total off-target occupancy `Phi` through
+two terms that the conservation law forces to have opposite signs: a direct effect and a
+redistribution effect routed through the shared pool. Because the reduced Jacobian obeys
+`D = 1 + B + B_on > B`, redistribution can offset the direct effect but can never overturn
+it, which is what pins the sign of `dPhi/dK`.
+
+(c) The capability contrast that the rest of the repository tests. An independent
+per-target scorer holds the pool fixed, so a competitor `x_k` leaves every off-target
+untouched (`d theta_j / d x_k = 0`). The conservation-law operator solves for `f*`, so the
+same competitor lowers the pool and every off-target occupancy strictly decreases
+(`d theta_j / d x_k < 0`). Panel (c) is the mechanism behind the learned-layer capability
+contrast in the last figure below.
 
 ### Certified-direction panel
 

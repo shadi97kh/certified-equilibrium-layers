@@ -20,7 +20,7 @@ import exp_realdata as ex  # noqa: E402
 
 
 def test_enumerates_all_offtarget_datasets() -> None:
-    from cascade.data import OFFTARGET_CERTIFICATION, datasets_with_role
+    from cel.data import OFFTARGET_CERTIFICATION, datasets_with_role
 
     assert set(ex.OFFTARGET_LOADERS) == set(datasets_with_role(OFFTARGET_CERTIFICATION))
 

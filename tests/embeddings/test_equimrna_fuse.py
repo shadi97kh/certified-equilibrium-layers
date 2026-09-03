@@ -19,7 +19,7 @@ import pytest
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.embeddings import equimrna_fuse as ef  # noqa: E402
+from cel.embeddings import equimrna_fuse as ef  # noqa: E402
 
 
 def test_artifact_absent_in_this_env() -> None:
@@ -43,7 +43,7 @@ def test_offtarget_nodes_are_never_fused() -> None:
 def test_clean_skip_when_artifact_absent(caplog) -> None:
     base = np.arange(6.0).reshape(3, 2)
     ids = ["s0", "s1", "s2"]
-    with caplog.at_level(logging.INFO, logger="cascade.embeddings.equimrna_fuse"):
+    with caplog.at_level(logging.INFO, logger="cel.embeddings.equimrna_fuse"):
         out, info = ef.fuse_cds_efficacy(base, ids, node_kind=ef.CDS_EFFICACY_NODE)
     assert info["fused"] is False and info["reason"] == "artifact_absent"
     assert np.array_equal(out, base)  # unchanged, nothing fabricated

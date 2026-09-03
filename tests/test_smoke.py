@@ -1,8 +1,8 @@
 """Smoke test: package imports and version is set."""
 
-import cascade
+import cel
 
 
 def test_package_imports() -> None:
-    assert hasattr(cascade, "__version__")
-    assert isinstance(cascade.__version__, str)
+    assert hasattr(cel, "__version__")
+    assert isinstance(cel.__version__, str)

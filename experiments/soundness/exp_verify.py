@@ -5,7 +5,7 @@ On synthetic graphs with known edge confidences, draw many random adjacencies
 A ~ inhomogeneous random subgraph, compute the true deviation
 || P_alpha(A) x0 - y_plugin ||_2 from the plug-in mean-graph prediction
 y_plugin = P_alpha(A_bar) x0, and check empirically that it stays within the
-certified radius(delta) (cascade.certification.bernstein_certificate) at least a
+certified radius(delta) (cel.certification.bernstein_certificate) at least a
 1 - delta fraction of the time. Sweep delta and report empirical coverage versus
 the nominal 1 - delta.
 
@@ -38,7 +38,7 @@ import scipy.sparse as sp
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.verify.containment import dense_propagation_operator  # noqa: E402
+from cel.verify.containment import dense_propagation_operator  # noqa: E402
 from certification import EdgeBernoulliNoise, bernstein_certificate  # noqa: E402
 
 OUT = REPO / "results" / "aaai"

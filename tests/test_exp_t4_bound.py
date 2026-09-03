@@ -15,7 +15,7 @@ sys.path.insert(0, str(REPO / "src"))
 
 import exp_t4_bound as ex  # noqa: E402
 
-from cascade.verify import stability as st  # noqa: E402
+from cel.verify import stability as st  # noqa: E402
 
 
 def _grn(n: int) -> sp.csr_matrix:

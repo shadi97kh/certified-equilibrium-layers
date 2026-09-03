@@ -13,7 +13,7 @@ import pytest
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.experiments import subgate_d4d1 as sg  # noqa: E402
+from cel.experiments import subgate_d4d1 as sg  # noqa: E402
 
 
 def test_ddg_is_destabilizing() -> None:

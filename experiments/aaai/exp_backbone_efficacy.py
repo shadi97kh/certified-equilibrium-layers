@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Backbone on-target efficacy benchmark on the REAL OligoFormer suite.
 
-Trains the CCMP backbone (cascade.models.CCMPBackbone, the per-concept direct
+Trains the CCMP backbone (cel.models.CCMPBackbone, the per-concept direct
 seed-repression predictor, no propagation) as an on-target siRNA efficacy
 regressor on the real OligoFormer efficacy suite, under the standard protocol:
 
@@ -42,8 +42,8 @@ import numpy as np
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.features import concept_layout, featurize_pairs  # noqa: E402
-from cascade.features.seedmatch import revcomp  # noqa: E402
+from cel.features import concept_layout, featurize_pairs  # noqa: E402
+from cel.features.seedmatch import revcomp  # noqa: E402
 
 OUT = REPO / "results" / "aaai"
 DATASETS = ["huesken_test", "taka", "mix", "shabalina"]
@@ -96,7 +96,7 @@ def _target_for(antisense: str, sense: str) -> str:
 
 def real_datasets(raw_dir: Path, cache_root: Path) -> tuple[dict, dict]:
     """Featurize the real OligoFormer suite (raises FileNotFoundError if absent)."""
-    from cascade.data import canonical_split, load_oligoformer_efficacy
+    from cel.data import canonical_split, load_oligoformer_efficacy
 
     ds = load_oligoformer_efficacy(raw_dir, cache_root=cache_root)
     frame = ds.frame
@@ -131,7 +131,7 @@ def real_datasets(raw_dir: Path, cache_root: Path) -> tuple[dict, dict]:
 def train_and_eval(feats: dict, labels: dict, seed: int, epochs: int, lr: float) -> dict:
     import torch
 
-    from cascade.models import CCMPBackbone
+    from cel.models import CCMPBackbone
 
     torch.manual_seed(seed)
     x_tr, y_tr = feats["huesken_train"], labels["huesken_train"]

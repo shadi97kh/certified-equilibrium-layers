@@ -1,0 +1,136 @@
+{
+  "derepression_fold_threshold": 1.5,
+  "experiment": "derepression-threshold ordering vs the unknown absolute affinity scale",
+  "measured_ordering_reference": {
+    "bosson_mir92_25_measured_threshold_added_sites": 3000.0,
+    "denzler_mir122_measured_threshold_added_sites": 150000.0,
+    "measured_ordering_mir122_above_mir92_25": true
+  },
+  "nominal_affinities_copies_per_cell": {
+    "K6": 20000.0,
+    "K7": 3000.0,
+    "K8": 1000.0
+  },
+  "per_scale": [
+    {
+      "K8_copies_per_cell": 100.0,
+      "affinity_scale_x_nominal": 0.1,
+      "bosson_mir92_25_operator_threshold_added_sites": 9040.7923348248,
+      "both_finite": true,
+      "denzler_mir122_operator_threshold_added_sites": 159454.31949337944,
+      "ordering_mir122_above_mir92_25": true,
+      "threshold_ratio_mir122_over_mir92_25": 17.637206296528596
+    },
+    {
+      "K8_copies_per_cell": 215.44346900318834,
+      "affinity_scale_x_nominal": 0.21544346900318834,
+      "bosson_mir92_25_operator_threshold_added_sites": 9152.90392562747,
+      "both_finite": true,
+      "denzler_mir122_operator_threshold_added_sites": 159783.22512237355,
+      "ordering_mir122_above_mir92_25": true,
+      "threshold_ratio_mir122_over_mir92_25": 17.457107211077794
+    },
+    {
+      "K8_copies_per_cell": 464.15888336127784,
+      "affinity_scale_x_nominal": 0.46415888336127786,
+      "bosson_mir92_25_operator_threshold_added_sites": 9385.37136092782,
+      "both_finite": true,
+      "denzler_mir122_operator_threshold_added_sites": 160339.6820719354,
+      "ordering_mir122_above_mir92_25": true,
+      "threshold_ratio_mir122_over_mir92_25": 17.083999759396256
+    },
+    {
+      "K8_copies_per_cell": 1000.0,
+      "affinity_scale_x_nominal": 1.0,
+      "bosson_mir92_25_operator_threshold_added_sites": 9852.70356014371,
+      "both_finite": true,
+      "denzler_mir122_operator_threshold_added_sites": 161159.44590652362,
+      "ordering_mir122_above_mir92_25": true,
+      "threshold_ratio_mir122_over_mir92_25": 16.35687554413471
+    },
+    {
+      "K8_copies_per_cell": 2154.4346900318833,
+      "affinity_scale_x_nominal": 2.1544346900318834,
+      "bosson_mir92_25_operator_threshold_added_sites": 10756.110493093729,
+      "both_finite": true,
+      "denzler_mir122_operator_threshold_added_sites": 162178.45428502187,
+      "ordering_mir122_above_mir92_25": true,
+      "threshold_ratio_mir122_over_mir92_25": 15.077797349623102
+    },
+    {
+      "K8_copies_per_cell": 4641.588833612777,
+      "affinity_scale_x_nominal": 4.6415888336127775,
+      "bosson_mir92_25_operator_threshold_added_sites": 12452.918220311403,
+      "both_finite": true,
+      "denzler_mir122_operator_threshold_added_sites": 163220.20708350465,
+      "ordering_mir122_above_mir92_25": true,
+      "threshold_ratio_mir122_over_mir92_25": 13.106984579508714
+    },
+    {
+      "K8_copies_per_cell": 10000.0,
+      "affinity_scale_x_nominal": 10.0,
+      "bosson_mir92_25_operator_threshold_added_sites": 15654.146172106266,
+      "both_finite": true,
+      "denzler_mir122_operator_threshold_added_sites": 164198.44747753814,
+      "ordering_mir122_above_mir92_25": true,
+      "threshold_ratio_mir122_over_mir92_25": 10.489134678588812
+    },
+    {
+      "K8_copies_per_cell": 21544.346900318822,
+      "affinity_scale_x_nominal": 21.54434690031882,
+      "bosson_mir92_25_operator_threshold_added_sites": 21921.727888286114,
+      "both_finite": true,
+      "denzler_mir122_operator_threshold_added_sites": 165931.01050006226,
+      "ordering_mir122_above_mir92_25": true,
+      "threshold_ratio_mir122_over_mir92_25": 7.569248708206417
+    },
+    {
+      "K8_copies_per_cell": 46415.88833612777,
+      "affinity_scale_x_nominal": 46.41588833612777,
+      "bosson_mir92_25_operator_threshold_added_sites": 34745.81332504749,
+      "both_finite": true,
+      "denzler_mir122_operator_threshold_added_sites": 172018.02460709587,
+      "ordering_mir122_above_mir92_25": true,
+      "threshold_ratio_mir122_over_mir92_25": 4.950755447796407
+    },
+    {
+      "K8_copies_per_cell": 100000.0,
+      "affinity_scale_x_nominal": 100.0,
+      "bosson_mir92_25_operator_threshold_added_sites": 61792.92914271355,
+      "both_finite": true,
+      "denzler_mir122_operator_threshold_added_sites": 191634.21271601692,
+      "ordering_mir122_above_mir92_25": true,
+      "threshold_ratio_mir122_over_mir92_25": 3.101232056396438
+    }
+  ],
+  "reused": "scripts/coupling_contrast.py real configs (Denzler miR-122, Bosson miR-92/25), shared-pool solver, and 1.5-fold threshold definition, unmodified",
+  "scale_span_orders_of_magnitude": 3.0,
+  "scales": [
+    0.1,
+    0.21544346900318834,
+    0.46415888336127786,
+    1.0,
+    2.1544346900318834,
+    4.6415888336127775,
+    10.0,
+    21.54434690031882,
+    46.41588833612777,
+    100.0
+  ],
+  "summary": {
+    "bosson_threshold_range": [
+      9040.7923348248,
+      61792.92914271355
+    ],
+    "denzler_threshold_range": [
+      159454.31949337944,
+      191634.21271601692
+    ],
+    "n_scales": 10,
+    "n_scales_both_finite": 10,
+    "ordering_preserved_at_every_finite_scale": true,
+    "threshold_ratio_max": 17.637206296528596,
+    "threshold_ratio_min": 3.101232056396438
+  },
+  "swept_axis": "absolute site-type affinity scale (K8,K7,K6 and focal K) x nominal; relative site-type ordering preserved"
+}

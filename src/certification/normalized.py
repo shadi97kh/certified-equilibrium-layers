@@ -2,7 +2,7 @@
 
 For the symmetric-normalized operator S(A) = D_A^{-1/2} A D_A^{-1/2} the degree
 normalization D_A couples the edges, so the clean per-edge matrix-Bernstein
-decomposition of the un-normalized case (cascade.certification.certificate) does
+decomposition of the un-normalized case (cel.certification.certificate) does
 not apply directly. We handle the coupling with a concentration-of-the-
 normalized-adjacency argument in the style of Le, Levina, and Vershynin
 (Random Structures and Algorithms, 2017): condition on the high-probability

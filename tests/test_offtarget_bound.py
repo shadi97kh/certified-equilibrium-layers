@@ -1,12 +1,12 @@
-"""Tests for the Theorem 4 certified off-target bound (cascade.verify.offtarget_bound)."""
+"""Tests for the Theorem 4 certified off-target bound (cel.verify.offtarget_bound)."""
 
 from __future__ import annotations
 
 import numpy as np
 import scipy.sparse as sp
 
-from cascade.verify import offtarget_bound as ob
-from cascade.verify import stability as st
+from cel.verify import offtarget_bound as ob
+from cel.verify import stability as st
 
 
 def _grn(n: int, seed: int) -> sp.csr_matrix:

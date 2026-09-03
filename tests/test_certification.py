@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 import scipy.sparse as sp
 
-from cascade.data import load_string_grn
+from cel.data import load_string_grn
 from certification import RandomEdgeNoise, certify_l2_region, empirical_coverage
 
 FIXTURE = Path(__file__).parent / "fixtures" / "string_tiny.txt"

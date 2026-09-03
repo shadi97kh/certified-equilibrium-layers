@@ -34,7 +34,7 @@ def test_reported_baselines_are_cited_not_fabricated() -> None:
 
 
 def test_target_defaults_to_perfect_complement() -> None:
-    from cascade.features.seedmatch import revcomp
+    from cel.features.seedmatch import revcomp
 
     g = "UGAGGUAGUAGGUUGUAUAGU"
     assert ex._target_for(g, "") == revcomp(g)  # on-target site when no sense given

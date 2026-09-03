@@ -12,14 +12,14 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from cascade.data import (
+from cel.data import (
     SignedDirectedGRN,
     StringGRN,
     load_dorothea,
     load_string_undirected,
     load_trrust,
 )
-from cascade.data.grn import TRRUST_URLS
+from cel.data.grn import TRRUST_URLS
 
 
 def _trrust(fixtures_dir: Path) -> Path:

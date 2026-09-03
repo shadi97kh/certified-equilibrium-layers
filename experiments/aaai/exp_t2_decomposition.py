@@ -31,7 +31,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.data.grn import signed_spectral_norm, signed_spectral_radius  # noqa: E402
+from cel.data.grn import signed_spectral_norm, signed_spectral_radius  # noqa: E402
 
 OUT = REPO / "results" / "aaai"
 
@@ -57,7 +57,7 @@ def main() -> int:
     print(f"[t2-decomp] seed={args.seed}")
 
     try:
-        from cascade.data import load_trrust
+        from cel.data import load_trrust
 
         grn = load_trrust(species="human")  # raises FileNotFoundError if absent
     except (FileNotFoundError, NotImplementedError) as exc:

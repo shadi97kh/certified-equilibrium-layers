@@ -18,7 +18,7 @@ sys.path.insert(0, str(REPO / "src"))
 
 import exp_t2_stability as ex  # noqa: E402
 
-from cascade.verify import stability as st  # noqa: E402
+from cel.verify import stability as st  # noqa: E402
 
 ALPHAS = (0.1, 0.3, 0.5, 0.7, 0.9)
 

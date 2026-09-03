@@ -2,12 +2,12 @@
 """Fail if synthetic-data generation appears on any AAAI reported-number path.
 
 Per the hard data policy in OUTLINE.md, no synthetic data may live in
-``src/cascade/data/`` or ``experiments/aaai/`` (the loaders and the experiments
+``src/cel/data/`` or ``experiments/aaai/`` (the loaders and the experiments
 that feed reported AAAI numbers). This script greps those paths for
 synthetic-generation patterns and exits non-zero if any appear.
 
 Scanned paths:
-- ``src/cascade/data/`` (the real-data loaders)
+- ``src/cel/data/`` (the real-data loaders)
 - ``experiments/aaai/`` (the real-data experiments and the aggregator)
 
 Flagged patterns (case-insensitive):
@@ -34,7 +34,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-SCAN_DIRS = [REPO / "src" / "cascade" / "data", REPO / "experiments" / "aaai"]
+SCAN_DIRS = [REPO / "src" / "cel" / "data", REPO / "experiments" / "aaai"]
 
 PATTERNS = [
     r"np\.random",
@@ -83,7 +83,7 @@ def _report(all_hits: list[tuple[Path, int, str]]) -> int:
 
 
 def _scan_default() -> int:
-    """Scan the fixed reported-number code paths (src/cascade/data, experiments/aaai)."""
+    """Scan the fixed reported-number code paths (src/cel/data, experiments/aaai)."""
     all_hits: list[tuple[Path, int, str]] = []
     for base in SCAN_DIRS:
         if not base.exists():
@@ -95,7 +95,7 @@ def _scan_default() -> int:
                 all_hits.append((path.relative_to(REPO), lineno, line))
     rc = _report(all_hits)
     if rc == 0:
-        print("OK: no synthetic-generation patterns in src/cascade/data/ or experiments/aaai/")
+        print("OK: no synthetic-generation patterns in src/cel/data/ or experiments/aaai/")
     return rc
 
 

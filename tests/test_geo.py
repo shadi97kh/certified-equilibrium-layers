@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from cascade.data import GEOOffTargetDataset, load_gse184929
+from cel.data import GEOOffTargetDataset, load_gse184929
 
 
 def test_load_detects_contrasts(fixtures_dir: Path, cache_root: Path) -> None:

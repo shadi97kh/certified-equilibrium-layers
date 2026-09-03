@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from cascade.data import HueskenDataset, canonical_split, load_huesken
+from cel.data import HueskenDataset, canonical_split, load_huesken
 
 
 def test_canonical_split_sizes() -> None:

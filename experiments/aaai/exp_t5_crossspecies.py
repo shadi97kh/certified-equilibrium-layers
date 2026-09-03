@@ -157,7 +157,7 @@ def main() -> int:
         from sklearn.metrics import roc_auc_score
         from sklearn.preprocessing import StandardScaler
 
-        from cascade.data import load_trrust
+        from cel.data import load_trrust
 
         grn = load_trrust(species="human")
     except (FileNotFoundError, ImportError) as exc:

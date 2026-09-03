@@ -13,7 +13,7 @@ import pytest
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.experiments import transfer_gate as tg  # noqa: E402
+from cel.experiments import transfer_gate as tg  # noqa: E402
 
 
 def test_gate_verdict_and_structure() -> None:

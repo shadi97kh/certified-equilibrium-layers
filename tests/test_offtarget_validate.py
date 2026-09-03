@@ -19,7 +19,7 @@ sys.path.insert(0, str(REPO / "src"))
 pytest.importorskip("scipy")
 pytest.importorskip("sklearn")  # not used directly, but keeps the env consistent
 
-from cascade.experiments import offtarget_validate as ov  # noqa: E402
+from cel.experiments import offtarget_validate as ov  # noqa: E402
 
 D1 = "Schlegel_2022_Ttr_D1_30mkg"
 

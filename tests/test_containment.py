@@ -8,8 +8,8 @@ import numpy as np
 import pytest
 import scipy.sparse as sp
 
-from cascade.data import load_string_grn
-from cascade.verify import containment as C
+from cel.data import load_string_grn
+from cel.verify import containment as C
 
 FIXTURE = Path(__file__).parent / "fixtures" / "string_tiny.txt"
 

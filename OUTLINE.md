@@ -156,19 +156,19 @@ stable; breaking them is a contract change.
 
 Importable and implemented:
 
-- **P_alpha operator.** `cascade.models.propagation_head.PropagationHead`
-  (torch) and `cascade.verify.containment.propagate` /
-  `cascade.verify.containment.dense_propagation_operator` (numpy).
-- **STRING graph builder.** `cascade.data.load_string_grn`.
+- **P_alpha operator.** `cel.models.propagation_head.PropagationHead`
+  (torch) and `cel.verify.containment.propagate` /
+  `cel.verify.containment.dense_propagation_operator` (numpy).
+- **STRING graph builder.** `cel.data.load_string_grn`.
 - **GSE184929 off-target loader** (SeedMatchR seed logic).
-  `cascade.data.load_gse184929` with `cascade.features.seedmatch`.
+  `cel.data.load_gse184929` with `cel.features.seedmatch`.
 
 Tracked gaps. These are stubbed and each has a visible failing (xfail-strict)
 gap test in `tests/test_shared_core.py`. When a gap is implemented, the test
 flips to XPASS and the strict marker forces removal, so the gap cannot close
 silently.
 
-- **Reactome graph builder.** `cascade.data.reactome.load_reactome_graph`
+- **Reactome graph builder.** `cel.data.reactome.load_reactome_graph`
   raises `NotImplementedError`. TODO: parse the Reactome functional-interaction
   / pathway graph into the same symmetric-normalized sparse `S` form as STRING.
 

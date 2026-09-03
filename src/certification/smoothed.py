@@ -27,7 +27,7 @@ from dataclasses import dataclass
 import numpy as np
 import scipy.sparse as sp
 
-from cascade.verify.containment import dense_propagation_operator, propagate
+from cel.verify.containment import dense_propagation_operator, propagate
 
 from .noise_model import EdgeBernoulliNoise, NormalizationScheme, normalize_adjacency
 

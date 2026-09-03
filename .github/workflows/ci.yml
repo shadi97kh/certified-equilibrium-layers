@@ -39,7 +39,7 @@ jobs:
             "pyarrow==16.1.0"
 
       - name: Install package (no extras)
-        # Editable install without resolving optional deps so 'import cascade'
+        # Editable install without resolving optional deps so 'import cel'
         # works in tests without pulling torch + PyG.
         run: |
           python -m pip install --no-deps -e .

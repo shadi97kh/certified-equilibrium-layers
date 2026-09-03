@@ -1,6 +1,6 @@
-"""The promoted seed-duplex dG module (cascade.seed_dg) on REAL Huesken sequences.
+"""The promoted seed-duplex dG module (cel.seed_dg) on REAL Huesken sequences.
 
-Pins that cascade.seed_dg.seed_duplex_dg reproduces the EXACT dG inputs Theorem 3
+Pins that cel.seed_dg.seed_duplex_dg reproduces the EXACT dG inputs Theorem 3
 consumes (exp_t3_constraint._seed_dgs), computed on the real Huesken antisense /
 target pairs. ViennaRNA and the real Huesken data are both gated: the test skips
 when either is absent (the lightweight import path never needs ViennaRNA).
@@ -25,23 +25,23 @@ REAL_EFFICACY = REPO / "data" / "raw" / "efficacy"
 
 def test_seed_dg_importable_without_calling_vienna() -> None:
     # Importing the module must NOT require ViennaRNA (gated); only calling does.
-    from cascade import seed_dg
+    from cel import seed_dg
 
     assert hasattr(seed_dg, "seed_duplex_dg")
     assert seed_dg.SEED_START == 1 and seed_dg.SEED_LEN == 7  # seed = guide nt 2-8
 
 
 def test_thermo_reexports_the_promoted_module() -> None:
-    # cascade.features.thermo re-exports the canonical implementation unchanged.
-    from cascade.features.thermo import seed_duplex_dg as thermo_dg
-    from cascade.seed_dg import seed_duplex_dg as module_dg
+    # cel.features.thermo re-exports the canonical implementation unchanged.
+    from cel.features.thermo import seed_duplex_dg as thermo_dg
+    from cel.seed_dg import seed_duplex_dg as module_dg
 
     assert thermo_dg is module_dg
 
 
 def test_seed_dg_matches_t3_inputs_on_real_huesken(cache_root: Path) -> None:
-    from cascade.data import load_huesken_efficacy
-    from cascade.seed_dg import seed_duplex_dg
+    from cel.data import load_huesken_efficacy
+    from cel.seed_dg import seed_duplex_dg
 
     if not (REAL_EFFICACY / "huesken.csv").exists():
         pytest.skip("real Huesken efficacy data not present")

@@ -12,7 +12,7 @@ REUSED, NOT REBUILT (paths + signatures printed at runtime):
     already reused by theory_realdata_verification.py);
   * closed-form Jacobian occ_langmuir(f, K) -> (f/(K+f), K/(K+f)^2) from theory_realdata_verification.py
     (checked against central finite differences to ~1e-7 there);
-  * GSE140217 loader load_corpus() from cascade.experiments.ot_train_transfer (cache RAISES if absent).
+  * GSE140217 loader load_corpus() from cel.experiments.ot_train_transfer (cache RAISES if absent).
 The custom torch.autograd.Function wrapping the solve with the analytic IFT backward is the only new
 piece; its gradient is gated against central finite differences before any training.
 
@@ -107,7 +107,7 @@ def equilibrium_theta(k: torch.Tensor, x: torch.Tensor, m: float) -> torch.Tenso
 
 # ----------------------------------------------------------------------- data
 def build_pools() -> dict:
-    from cascade.experiments.ot_train_transfer import load_corpus
+    from cel.experiments.ot_train_transfer import load_corpus
 
     corpus = load_corpus()
     df = corpus[corpus["has_3utr"] & corpus["best_site_type"].isin(SITE_TYPES)].copy()
@@ -526,7 +526,7 @@ def main() -> int:
             "signature": "occ_langmuir(f, K) -> (f/(K+f), K/(K+f)**2)",
         },
         "gse140217_loader": {
-            "path": "src/cascade/experiments/ot_train_transfer.py",
+            "path": "src/cel/experiments/ot_train_transfer.py",
             "signature": "load_corpus() -> pandas.DataFrame (cache RAISES if absent)",
         },
     }

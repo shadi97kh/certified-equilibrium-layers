@@ -7,7 +7,7 @@ the teleport alpha in {0.05, 0.1, 0.15, 0.2, 0.5}. The magnetic operator is
     M(q, alpha) = (1 - alpha) (I - L_q^sigma),
 
 where L_q^sigma is the normalized magnetic SIGNED Laplacian (MSGNN, He et al. 2022;
-the propagation primitive inside cascade.propagation.MagneticPPR). L_q^sigma is
+the propagation primitive inside cel.propagation.MagneticPPR). L_q^sigma is
 Hermitian and PSD with spectrum in [0, 2], so M is normal and its operator 2-norm
 equals its spectral radius, (1 - alpha) max_i |1 - lambda_i| <= 1 - alpha.
 
@@ -40,7 +40,7 @@ import scipy.sparse as sp
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "src"))
 
-from cascade.verify import offtarget_bound as ob  # noqa: E402
+from cel.verify import offtarget_bound as ob  # noqa: E402
 
 OUT = REPO / "results" / "aaai"
 Q_GRID = (0.0, 0.1, 0.2, 0.25, 0.5)
@@ -80,7 +80,7 @@ def main() -> int:
     try:
         import torch
 
-        from cascade.data import load_trrust
+        from cel.data import load_trrust
 
         grn = load_trrust(species="human")
     except (FileNotFoundError, NotImplementedError, ImportError) as exc:

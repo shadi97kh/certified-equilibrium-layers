@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from cascade.data import (
+from cel.data import (
     OFFTARGET_CERTIFICATION,
     OffTargetDataset,
     load_birmingham2006,
@@ -14,8 +14,8 @@ from cascade.data import (
     load_jackson2006,
     load_seedseq,
 )
-from cascade.data import offtarget as ot
-from cascade.data.offtarget import COLUMNS
+from cel.data import offtarget as ot
+from cel.data.offtarget import COLUMNS
 
 
 def _ot(fixtures_dir: Path, name: str) -> Path:
@@ -79,7 +79,7 @@ def test_ks_d_statistic_matches_scipy() -> None:
     import numpy as np
     from scipy import stats
 
-    from cascade.data import seedmatch_ks_test
+    from cel.data import seedmatch_ks_test
 
     seed = np.array([-3.1, -0.95, -0.80, -0.62, -1.2, -0.7])
     bg = np.array([0.05, -0.10, 0.12, -0.05, 0.30, -0.20, 0.0])
@@ -95,7 +95,7 @@ def test_ks_d_statistic_matches_scipy() -> None:
 def test_ks_one_sided_pvalue_matches_r_formula() -> None:
     import numpy as np
 
-    from cascade.data import seedmatch_ks_test
+    from cel.data import seedmatch_ks_test
 
     seed = np.array([-3.1, -0.95, -0.80, -0.62])
     bg = np.array([0.05, -0.10, 0.12, -0.05])
@@ -111,7 +111,7 @@ def test_ks_one_sided_pvalue_matches_r_formula() -> None:
 def test_ks_orientation_seed_matched_more_repressed() -> None:
     import numpy as np
 
-    from cascade.data import seedmatch_ks_test
+    from cel.data import seedmatch_ks_test
 
     log2fc = np.array([-2.0, -1.5, -1.0, 0.1, 0.2, 0.3])
     mask = np.array([True, True, True, False, False, False])
@@ -124,7 +124,7 @@ def test_ks_orientation_seed_matched_more_repressed() -> None:
 def test_ks_identical_distributions_gives_unit_pvalue() -> None:
     import numpy as np
 
-    from cascade.data import seedmatch_ks_test
+    from cel.data import seedmatch_ks_test
 
     log2fc = np.array([0.0, 1.0, 2.0, 3.0, 0.0, 1.0, 2.0, 3.0])
     mask = np.array([True] * 4 + [False] * 4)
@@ -137,7 +137,7 @@ def test_ks_requires_both_groups() -> None:
     import numpy as np
     import pytest as _pytest
 
-    from cascade.data import seedmatch_ks_test
+    from cel.data import seedmatch_ks_test
 
     with _pytest.raises(ValueError, match="seed-matched"):
         seedmatch_ks_test(np.array([0.1, 0.2]), np.array([True, True]))
@@ -149,7 +149,7 @@ def _sm(fixtures_dir: Path) -> Path:
 
 
 def test_schlegel_loads_real_slice(fixtures_dir: Path, cache_root: Path) -> None:
-    from cascade.data import SeedMatchRDataset, load_schlegel2022
+    from cel.data import SeedMatchRDataset, load_schlegel2022
 
     ds = load_schlegel2022(
         "Schlegel_2022_Ttr_D1_30mkg", raw_dir=_sm(fixtures_dir), cache_root=cache_root
@@ -175,7 +175,7 @@ def test_schlegel_loads_real_slice(fixtures_dir: Path, cache_root: Path) -> None
 
 
 def test_schlegel_ks_evaluation_via_dataset(fixtures_dir: Path, cache_root: Path) -> None:
-    from cascade.data import load_schlegel2022
+    from cel.data import load_schlegel2022
 
     ds = load_schlegel2022(
         "Schlegel_2022_Ttr_D1_30mkg", raw_dir=_sm(fixtures_dir), cache_root=cache_root
@@ -188,7 +188,7 @@ def test_schlegel_ks_evaluation_via_dataset(fixtures_dir: Path, cache_root: Path
 
 
 def test_schlegel_missing_raises_with_source(cache_root: Path, tmp_path) -> None:
-    from cascade.data import SEEDMATCHR_SOURCE, load_schlegel2022
+    from cel.data import SEEDMATCHR_SOURCE, load_schlegel2022
 
     with pytest.raises(FileNotFoundError) as exc:
         load_schlegel2022(
@@ -200,7 +200,7 @@ def test_schlegel_missing_raises_with_source(cache_root: Path, tmp_path) -> None
 
 
 def test_schlegel_unknown_dataset_raises(cache_root: Path, tmp_path) -> None:
-    from cascade.data import load_schlegel2022
+    from cel.data import load_schlegel2022
 
     with pytest.raises(KeyError, match="unknown SeedMatchR dataset"):
         load_schlegel2022("not_a_dataset", raw_dir=tmp_path, cache_root=cache_root)
@@ -210,7 +210,7 @@ def test_schlegel_loads_geo_direct_schema(fixtures_dir: Path, cache_root: Path) 
     # The R-free path: the raw GEO GSE184929 DESeq2 table (ensembl_gene_id,
     # log2FoldChange, pvalue, padj, symbol) loads directly via download_offtarget.sh,
     # with no seed annotation yet (computed natively in a later step, not faked).
-    from cascade.data import load_schlegel2022
+    from cel.data import load_schlegel2022
 
     raw = fixtures_dir / "offtarget" / "seedmatchr_geo"
     ds = load_schlegel2022("Schlegel_2022_Ttr_D1_30mkg", raw_dir=raw, cache_root=cache_root)

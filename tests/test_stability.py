@@ -1,11 +1,11 @@
-"""Tests for the Theorem 2 stability primitives (cascade.verify.stability)."""
+"""Tests for the Theorem 2 stability primitives (cel.verify.stability)."""
 
 from __future__ import annotations
 
 import numpy as np
 import scipy.sparse as sp
 
-from cascade.verify import stability as st
+from cel.verify import stability as st
 
 
 def _directed_broadcast(k: int = 6) -> sp.csr_matrix:
