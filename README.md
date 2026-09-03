@@ -53,6 +53,31 @@ cannot express competitor coupling).
 
 ## Figures
 
+### Operator schematic
+
+![Conservation-law equilibrium operator](results/figures/fig1_operator_schematic.png)
+
+How the certified operator works, on a four-transcript instance (one on-target plus 8mer,
+7mer-m8 and 6mer seed off-targets).
+
+(a) The conserved pool `M` splits into free guide `f` and the guide sequestered by every
+site, `sum_j x_j sigma_j(f)`. Weaker seed matches carry larger `K_j` and therefore lower
+equilibrium occupancy `theta_j`, so the whole occupancy profile is set by the single scalar
+`f`.
+
+(b) A change in the on-target affinity `K` moves total off-target occupancy `Phi` through
+two terms that the conservation law forces to have opposite signs: a direct effect and a
+redistribution effect routed through the shared pool. Because the reduced Jacobian obeys
+`D = 1 + B + B_on > B`, redistribution can offset the direct effect but can never overturn
+it, which is what pins the sign of `dPhi/dK`.
+
+(c) The capability contrast that the rest of the repository tests. An independent
+per-target scorer holds the pool fixed, so a competitor `x_k` leaves every off-target
+untouched (`d theta_j / d x_k = 0`). The conservation-law operator solves for `f*`, so the
+same competitor lowers the pool and every off-target occupancy strictly decreases
+(`d theta_j / d x_k < 0`). Panel (c) is the mechanism behind the learned-layer capability
+contrast in the last figure below.
+
 ### Certified-direction panel
 
 ![Certified-direction panel](results/figures/fig2_certified_panel.png)
