@@ -34,6 +34,7 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 sys.path.insert(0, str(REPO / "scripts"))
 import gse108823_dose_enumeration as g8  # noqa: E402
+
 from certified_panel_filtered import CONTRASTS, compute_contrast  # noqa: E402
 from seedmod_loader import _load_fasta  # noqa: E402
 

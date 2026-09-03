@@ -1,4 +1,4 @@
-# Certified Comparative Statics for Conservation-Law Equilibrium Layers, with an Application to siRNA Off-Target Competition
+# Certified-Monotone Equilibrium Layers, with an Application to siRNA Off-Target Competition
 
 Interpretable modeling of siRNA seed-mediated off-target activity and competitive
 endogenous RNA (ceRNA) derepression, built on a certified conservation-law equilibrium
